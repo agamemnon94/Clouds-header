@@ -93,12 +93,15 @@ header {
   height: 100vh;
 }
 .h1__point__box {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
+  width: 80%;
   text-align: center;
 }
 
@@ -112,9 +115,7 @@ header {
   cursor: pointer;
   display: none;
 }
-/* .btn__toggle__container img {
-  width: 40px;
-} */
+
 /*******************/
 /*** Icon Burger ***/
 /*******************/
@@ -165,8 +166,6 @@ header {
 .btn1.active .lignes:nth-child(2) {
   opacity: 0;
   transform: translateX(-20px);
-  /* top: 18px;
-  transform: rotate(135deg); */
 }
 .btn1.active .lignes:nth-child(3) {
   top: 18px;
@@ -185,8 +184,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  top: 85%;
+  position: relative;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 200px;
@@ -197,6 +196,7 @@ header {
   background: transparent;
   border: 2px solid var(--darkgold);
   border-radius: 20px;
+  transition: 0.5s;
   z-index: 2;
 }
 .btnOval::after {
@@ -209,15 +209,15 @@ header {
   height: 58px;
   box-shadow: 0px 0px 0px 3px rgba(55, 55, 55, 0.12);
   border-radius: 20px;
+  transition: 0.5s;
 }
 .rightCursor {
   position: absolute;
-  top: 84.9%;
-  left: 52.7%;
+  top: 1;
+  right: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(-50%, -50%);
   width: 90px;
   height: 50px;
   font-size: 1.5rem;
@@ -228,21 +228,19 @@ header {
   box-shadow: -7px 9px 5px var(--MLTD);
   transition: 0.3s ease-out;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 .leftCursor {
   position: absolute;
-  top: 84.9%;
-  left: 47.35%;
-  transform: translate(-50%, -50%);
+  top: 3%;
+  left: 1.2%;
   width: 90px;
   height: 50px;
   border-radius: 15px;
   background-image: linear-gradient(to right, var(--darkgold), var(--goldy));
   box-shadow: -7px 9px 5px var(--MLTD);
   transition: 0.3s ease-out;
-  cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 .btnspan {
   font-family: roboto, sans-serif;
@@ -252,12 +250,11 @@ header {
   border-radius: 12px;
   padding: 1rem 1.5rem;
   transition: 0.2s ease-out;
-  cursor: pointer;
-  z-index: 3;
+  z-index: 2;
 }
 .btnspan:hover {
   background: var(--lightTransDark);
-  z-index: 3;
+  z-index: 2;
 }
 
 .h1-header {
@@ -1235,6 +1232,7 @@ footer a {
     margin: 0;
   }
 }
+
 @media screen and (max-width: 1550px) {
   html {
     font-size: 50%;
@@ -1245,6 +1243,14 @@ footer a {
   }
   .display__content {
     width: 300px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .scroll-to-top {
+    right: 5px;
+  }
+  .scroll__to__top__who {
+    right: 3px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1308,45 +1314,18 @@ footer a {
     height: 90px;
     background: transparent;
   }
-  .rightCursor {
-    position: absolute;
-    top: 84.9%;
-    left: 52.7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-10%, -50%);
-    width: 90px;
-    height: 50px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--deepDarkGold);
-    border-radius: 15px;
-    background-image: linear-gradient(to right, var(--goldy), var(--darkgold));
-    box-shadow: -7px 7px 5px var(--MLTD);
-    transition: 0.3s ease-out;
-    cursor: pointer;
-    z-index: 2;
-  }
-  .leftCursor {
-    position: absolute;
-    top: 84.9%;
-    left: 47.35%;
-    transform: translate(-90%, -50%);
-    width: 90px;
-    height: 50px;
-    border-radius: 15px;
-    background-image: linear-gradient(to right, var(--darkgold), var(--goldy));
-    box-shadow: -7px 7px 5px var(--MLTD);
-    transition: 0.3s ease-out;
-    cursor: pointer;
-    z-index: 2;
-  }
+
   .zoomed__span {
     font-size: 3rem;
   }
   .h1-header {
     font-size: 8.5rem;
+  }
+  .scroll-to-top {
+    display: none;
+  }
+  .scroll__to__top__who {
+    display: none;
   }
 }
 @media screen and (max-width: 530px) {

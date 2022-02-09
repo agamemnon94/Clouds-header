@@ -75,15 +75,14 @@ smoothScroll.addEventListener('click', () => {
 // change la class de la div et le contenu texte de la balise "<p>"
 myCursorOval.addEventListener('click', () => {
     myCursorOval.classList.toggle('leftCursor');
-    console.log('hello');
-    if (paragrapheHeader.innerText == "Click me") {
+    // console.log('hello');
+    if (paragrapheHeader.innerText === "Click me") {
         paragrapheHeader.innerText = "And now,";
     } else {
         paragrapheHeader.innerText = "Click me";
     }
-
-
 });
+
 
 goContact.addEventListener('click', () => {
     // location.href = "#end";
