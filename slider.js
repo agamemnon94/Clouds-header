@@ -23,7 +23,7 @@ let span16 = document.querySelector('.span16');
 let span17 = document.querySelector('.span17');
 
 
-// Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
+// ↓ Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
 liste.addEventListener('click', function (e) {
     let target = e.target; // Clicked element
     while (target && target.parentNode !== ul) {
@@ -84,7 +84,6 @@ sliders.forEach(function (slider) {
                 sliderP2.style.opacity = '0';
                 sliderP2.style.transform = ('scale(0)');
 
-
             } if (newWidth > 45) {
                 sliderP2.style.opacity = '1';
                 sliderP2.style.transform = ('scale(1)');
@@ -99,7 +98,6 @@ sliders.forEach(function (slider) {
                 sliderContainer.classList.remove('slider__container__left')
                 listWho.classList.remove('display__content');
             }
-            // console.log(e);
         }
     })
 });
@@ -158,9 +156,7 @@ window.addEventListener("scroll", (e) => {
         span16.classList.remove('active__falls');
         span17.classList.remove('active__falls');
     }
-
 });
-
 
 smoothScroll.addEventListener('click', () => {
     window.scrollTo({
