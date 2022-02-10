@@ -92,21 +92,14 @@ header {
   position: relative;
   height: 100vh;
 }
-.h1__point__box {
-  /* position: relative; */
+
+.titleHeadBox {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
   text-align: center;
-}
-
-.titleHeadBox {
-  position: relative;
+  width: 100%;
 }
 /* ************************** */
 /*   Bouton toggle Hamburger  */
@@ -202,18 +195,17 @@ header {
 .btnOval::after {
   content: "";
   position: absolute;
-  top: 57%;
-  left: 47%;
-  transform: translate(-50%, -50%);
-  width: 195px;
+  top: 3px;
+  left: -5px;
+  width: 197px;
   height: 58px;
   box-shadow: 0px 0px 0px 3px rgba(55, 55, 55, 0.12);
   border-radius: 20px;
 }
 .rightCursor {
   position: absolute;
-  top: 1;
-  right: 1%;
+  top: 2px;
+  left: 53%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,22 +217,22 @@ header {
   border-radius: 15px;
   background-image: linear-gradient(to right, var(--goldy), var(--darkgold));
   box-shadow: -7px 9px 5px var(--MLTD);
+  transition: 0.3s ease-out;
   cursor: pointer;
   z-index: 3;
-  transition: 1s;
 }
 .leftCursor {
   position: absolute;
-  top: 3%;
-  left: 1.2%;
+  top: 2px;
+  left: 3px;
   width: 90px;
   height: 50px;
   border-radius: 15px;
   background-image: linear-gradient(to right, var(--darkgold), var(--goldy));
   box-shadow: -7px 9px 5px var(--MLTD);
+  transition: 0.3s ease-out;
   cursor: pointer;
   z-index: 3;
-  transition: 1s;
 }
 
 .spanbox {
