@@ -196,7 +196,7 @@ header {
   background: transparent;
   border: 2px solid var(--darkgold);
   border-radius: 20px;
-  transition: 0.5s;
+  transition: 1s;
   z-index: 2;
 }
 .btnOval::after {
@@ -209,7 +209,6 @@ header {
   height: 58px;
   box-shadow: 0px 0px 0px 3px rgba(55, 55, 55, 0.12);
   border-radius: 20px;
-  transition: 0.5s;
 }
 .rightCursor {
   position: absolute;
@@ -226,9 +225,9 @@ header {
   border-radius: 15px;
   background-image: linear-gradient(to right, var(--goldy), var(--darkgold));
   box-shadow: -7px 9px 5px var(--MLTD);
-  transition: 0.3s ease-out;
   cursor: pointer;
   z-index: 3;
+  transition: 1s;
 }
 .leftCursor {
   position: absolute;
@@ -239,8 +238,16 @@ header {
   border-radius: 15px;
   background-image: linear-gradient(to right, var(--darkgold), var(--goldy));
   box-shadow: -7px 9px 5px var(--MLTD);
-  transition: 0.3s ease-out;
+  cursor: pointer;
   z-index: 3;
+  transition: 1s;
+}
+
+.spanbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .btnspan {
   font-family: roboto, sans-serif;
@@ -250,11 +257,12 @@ header {
   border-radius: 12px;
   padding: 1rem 1.5rem;
   transition: 0.2s ease-out;
-  z-index: 2;
+  cursor: pointer;
+  z-index: 1;
 }
 .btnspan:hover {
   background: var(--lightTransDark);
-  z-index: 2;
+  z-index: 1;
 }
 
 .h1-header {
