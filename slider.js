@@ -23,6 +23,8 @@ let span16 = document.querySelector('.span16');
 let span17 = document.querySelector('.span17');
 
 
+
+
 // ↓ Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
 liste.addEventListener('click', function (e) {
     let target = e.target; // Clicked element
@@ -78,17 +80,13 @@ sliders.forEach(function (slider) {
             sliderRange.value = newWidth;
             updateSliderPosition();
             // console.log(newWidth);
-
             if (newWidth < 55) {
                 sliderP1.classList.add('slider__p__opacity');
                 sliderP2.style.opacity = '0';
-                sliderP2.style.transform = ('scale(0)');
-
             } if (newWidth > 45) {
                 sliderP2.style.opacity = '1';
                 sliderP2.style.transform = ('scale(1)');
                 sliderP1.classList.remove('slider__p__opacity');
-
             } if (newWidth < 0) {
                 // isDragging = false;
                 sliderContainer.classList.add('slider__container__left')
@@ -101,14 +99,6 @@ sliders.forEach(function (slider) {
         }
     })
 });
-
-myContactH3.addEventListener('click', function () {
-    myVideoFullScreen.requestFullscreen();
-    // if (myVideoFullScreen.requestFullscreen()) {
-    //     myContactH3.style.opacity = '0';
-    // }
-    // essayer de faire toggle avec .une__class.class__active
-})
 window.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
         // myContactH3.style.opacity = '1';
@@ -168,5 +158,20 @@ smoothScroll.addEventListener('click', () => {
     // window.scrollBy(0, window.innerHeight);
 });
 
+let information = document.getElementById('info');
+
+information.addEventListener('mouseover', () => {
+    console.log('Hello');
+    myContactH3.classList.add('h3__whoami__container__hover');
+})
+information.addEventListener('mouseleave', () => {
+    myContactH3.classList.remove('h3__whoami__container__hover');
+    console.log('Bye bye');
+})
+
+// information.addEventListener('click', () => {
+//     console.log('Click');
+//     myContactH3.classList.toggle('h3__whoami__container__hover');
+// })
 
 
