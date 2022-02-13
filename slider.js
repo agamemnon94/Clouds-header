@@ -22,9 +22,6 @@ let span15 = document.querySelector('.span15');
 let span16 = document.querySelector('.span16');
 let span17 = document.querySelector('.span17');
 
-
-
-
 // ↓ Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
 liste.addEventListener('click', function (e) {
     let target = e.target; // Clicked element
@@ -45,7 +42,6 @@ liste.addEventListener('click', function (e) {
 //         console.log(e.target.id);  // Check if the element is a LI
 //     }
 // });
-
 sliders.forEach(function (slider) {
     let sliderRange = slider.querySelector('.slider__range');
     let sliderBefore = slider.querySelector('.slider__before');
@@ -85,12 +81,9 @@ sliders.forEach(function (slider) {
                 sliderP2.style.opacity = '0';
             } if (newWidth > 45) {
                 sliderP2.style.opacity = '1';
-                sliderP2.style.transform = ('scale(1)');
                 sliderP1.classList.remove('slider__p__opacity');
             } if (newWidth < 0) {
-                // isDragging = false;
                 sliderContainer.classList.add('slider__container__left')
-                // sliderP1.classList.remove('slider__p__opacity');
                 listWho.classList.add('display__content');
             } if (newWidth >= 100) {
                 sliderContainer.classList.remove('slider__container__left')
@@ -104,10 +97,9 @@ window.addEventListener('keydown', (e) => {
         // myContactH3.style.opacity = '1';
     }
 })
-window.addEventListener("scroll", (e) => {
-    console.log(scrollY);
-    if (window.scrollY > 999) {
-        myArrow.classList.add('arrow-visible');
+window.addEventListener("scroll", () => {
+    // console.log(scrollY);
+    if (window.scrollY > 799) {
         span1.classList.add('active__falls__later')
         span2.classList.add('active__falls');
         span3.classList.add('active__falls');
@@ -125,8 +117,9 @@ window.addEventListener("scroll", (e) => {
         span15.classList.add('active__falls');
         span16.classList.add('active__falls');
         span17.classList.add('active__falls');
-    }
-    if (window.scrollY < 901) {
+    } if (window.scrollY > 999) {
+        myArrow.classList.add('arrow-visible');
+    } if (window.scrollY < 801) {
         myArrow.classList.remove('arrow-visible');
         span1.classList.remove('active__falls__later');
         span2.classList.remove('active__falls');
@@ -161,14 +154,21 @@ smoothScroll.addEventListener('click', () => {
 let information = document.getElementById('info');
 
 information.addEventListener('mouseover', () => {
-    console.log('Hello');
+    // console.log('Hello');
     myContactH3.classList.add('h3__whoami__container__hover');
+    information.style.transform = "scale(1.1)";
 })
 information.addEventListener('mouseleave', () => {
     myContactH3.classList.remove('h3__whoami__container__hover');
-    console.log('Bye bye');
+    information.style.transform = "scale(1)";
+    // console.log('Bye bye');
 })
 
+// window.addEventListener("scroll", function () {
+//     let offset = window.pageYOffset;
+//     let value = window.scrollY;
+
+// })
 // information.addEventListener('click', () => {
 //     console.log('Click');
 //     myContactH3.classList.toggle('h3__whoami__container__hover');

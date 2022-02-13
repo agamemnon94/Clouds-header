@@ -10,12 +10,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bangers&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Beastly&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="/app.js" defer></script>
     <title>Clouds header</title>
 </head>
 
 <body id="body">
-    <header class="">
+    <header class="" id="videohead">
+        <p class="alex">alexandrebraga@free.fr</p>
         <video class="videohead" autoplay muted loop>
             <source src="/assets/video/video.mp4" type="video/mp4">
         </video>
@@ -32,13 +37,11 @@
             <a href="#" class="header-a" id="news">Newsletter</a>
         </nav>
 
-        <div class="titleHeadBox">
+        <div class="titleHeadBox" id="titleHeadBox">
             <h1 class="h1-header">developpez une nouvelle image</h1>
             <span class="h1Span1">.</span>
             <span class="h1Span2">.</span>
             <span class="h1Span3">.</span>
-            <!-- <div class="h1__point__box">
-            </div> -->
         </div>
         <div class="btnOval">
             <span class="btnspan">You Can</span>
@@ -57,24 +60,46 @@
                 </div>
             </div>
 
+
     </header>
 
 
-    <main class="main-container">
-
-
+    <main class="main-container" id="homemain">
         <section class="first-section">
+            <h2 class="h2_section1">Vous allez faire <br>un choix important...</h2>
+        </section>
 
-            <h2 class="h2_section1">Vous allez faire <br>un choix important</h2>
+        <section class="second__section">
+            <div class="parallax" id="parallax1">
+                <audio preload="auto" mute src="/assets/sounds/heartbeat-01a.mp3" type="audio/mp3"></audio>
+                <h3 class="h3parallax" id="h3blur">...partager votre </h3><span class="redword"
+                    id="redword">passion</span>
+                <p class="p__parallax1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque officiis,
+                    accusantium quibusdam nam
+                    ipsum sapiente rerum quisquam veniam explicabo minima libero sequi nobis eaque excepturi.</p>
+            </div>
+            <div class="parallax" id="parallax2">
+                <!-- <h3 class="h3parallax">div 2</h3> -->
+                <p class="p__parallax2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque officiis,
+                    accusantium quibusdam nam
+                    ipsum sapiente rerum quisquam veniam explicabo minima libero sequi nobis eaque excepturi.</p>
+            </div>
+            <div class="parallax" id="parallax3">
+                <!-- <h3 class="h3parallax">div 3</h3> -->
+            </div>
+            <div class=" parallax" id="parallax4">
+                <!-- <h3 class="h3parallax">div 4</h3> -->
+                <p class="p__parallax3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque officiis,
+                    accusantium quibusdam nam
+                    ipsum sapiente rerum quisquam veniam explicabo minima libero sequi nobis eaque excepturi.</p>
+            </div>
+
+
+
+
 
 
         </section>
-        <section class="second-section">
-
-
-        </section>
-
-
     </main>
 
     <div class="scroll-to-top" id="scroll-to-top">
@@ -93,7 +118,7 @@
 
 
 
-    <script src="/app.js"></script>
+
 </body>
 
 </html>
