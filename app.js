@@ -185,6 +185,7 @@ email.addEventListener('mouseleave', function () {
     link2.classList.remove('linked');
 })
 twitter.addEventListener('mouseover', function () {
+    link3.classList.add('linked');
 })
 twitter.addEventListener('mouseleave', function () {
     link3.classList.remove('linked');
