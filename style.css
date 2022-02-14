@@ -555,7 +555,7 @@ header {
   height: 100vh;
 }
 .p__parallax1 {
-  margin: 0 4rem 0 0;
+  margin: 0 8rem 0 0;
   width: 300px;
   font-size: 28px;
   color: var(--goldy);
@@ -582,6 +582,9 @@ header {
   font-size: 70px;
   color: var(--goldy);
   transition: 0.3s ease-in-out;
+  padding: 1rem 5rem 2rem 0;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
 }
 .blur {
   filter: blur(5px);
@@ -597,6 +600,8 @@ header {
   align-items: center;
   width: 500px;
   height: 450px;
+  /* background: white; */
+  border-radius: 35% 35% 50% 50%;
 }
 .redword {
   display: flex;
@@ -627,6 +632,7 @@ header {
   background-position: center;
   filter: drop-shadow(-12px 8px 4px rgba(87, 13, 13, 0.3));
   padding-bottom: 6rem;
+  border-radius: 35% 35% 50% 50%;
 }
 
 .heartBeat {
@@ -1681,6 +1687,8 @@ footer a {
   }
   .p__parallax1 {
     width: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media screen and (max-width: 950px) {
