@@ -21,6 +21,7 @@ let pblur = document.querySelector('.p__parallax1');
 let bgblur = document.getElementById('parallax1');
 
 
+
 // Fonction qui gère l'apparition des différents éléments en fonction de la hauteur de scroll sur le body
 window.addEventListener("scroll", () => {
     console.log(scrollY);
@@ -42,12 +43,30 @@ window.addEventListener("scroll", () => {
     } if (window.scrollY > 890) {
         myheaderdiv.classList.add('headerfixed');
         videoheader.classList.add('videoFixed');
+        myArrow.classList.add('arrow-visible');
+    } if (window.scrollY > 1499) {
+        // bigbody.classList.remove('pink__body');
+    } if (window.scrollY > 1899) {
         myHome.classList.add('header-a-gold');
         myContact.classList.add('header-a-gold');
         myNews.classList.add('header-a-gold');
-        myArrow.classList.add('arrow-visible');
-    } if (window.scrollY > 1499) {
+        myheaderdiv.classList.add('headerfixeddark');
+        myheaderdiv.classList.remove('headerfixed');
+        myHome.classList.add('headergoldy');
+        myContact.classList.add('headergoldy');
+        myNews.classList.add('headergoldy');
+
+    } if (window.scrollY < 1801) {
+        myheaderdiv.classList.remove('headerfixeddark');
+        // myheaderdiv.style.backgroundColor = 'transparent';
+        myheaderdiv.classList.add('headerfixed');
+        myHome.classList.remove('headergoldy');
+        myContact.classList.remove('headergoldy');
+        myNews.classList.remove('headergoldy');
+
+    } if (window.scrollY > 2500) {
         bigbody.classList.remove('pink__body');
+
     } if (window.scrollY < 150) {
         myheaderdiv.classList.add('navbg');
     } if (window.scrollY === 0) {
@@ -142,5 +161,38 @@ redword.addEventListener('mouseleave', function () {
     bgblur.style.filter = 'none';
     audio.pause();
     audio.currentTime = 0;
+})
+
+let linkedin = document.getElementById('linkedin');
+let link1 = document.getElementById('link1');
+let email = document.getElementById('email');
+let link2 = document.getElementById('link2');
+let twitter = document.getElementById('twitter');
+let link3 = document.getElementById('link3');
+let insta = document.getElementById('insta');
+let link4 = document.getElementById('link4');
+
+linkedin.addEventListener('mouseover', function () {
+    link1.classList.add('linked');
+})
+linkedin.addEventListener('mouseleave', function () {
+    link1.classList.remove('linked');
+})
+email.addEventListener('mouseover', function () {
+    link2.classList.add('linked');
+})
+email.addEventListener('mouseleave', function () {
+    link2.classList.remove('linked');
+})
+twitter.addEventListener('mouseover', function () {
+})
+twitter.addEventListener('mouseleave', function () {
+    link3.classList.remove('linked');
+})
+insta.addEventListener('mouseover', function () {
+    link4.classList.add('linked');
+})
+insta.addEventListener('mouseleave', function () {
+    link4.classList.remove('linked');
 })
 // btn1.addEventListener('click', burger);
