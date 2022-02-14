@@ -37,7 +37,9 @@ body {
   background: white;
   position: relative;
   min-height: 100vh;
-  /* transition: 1s ease-in-out; */
+}
+.sounds {
+  display: none;
 }
 
 /* ************************** */
@@ -443,12 +445,14 @@ header {
   z-index: 1;
 }
 .alex {
-  font-size: 1rem;
   position: absolute;
-  top: 97%;
+  top: 98%;
   left: 0.5%;
+  font-size: 1rem;
+  z-index: 3;
+}
+.alex a {
   color: var(--dark);
-  pointer-events: none;
   z-index: 3;
 }
 /* ************************** */
