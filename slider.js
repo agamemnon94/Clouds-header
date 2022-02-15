@@ -164,14 +164,3 @@ information.addEventListener('mouseleave', () => {
     // console.log('Bye bye');
 })
 
-// window.addEventListener("scroll", function () {
-//     let offset = window.pageYOffset;
-//     let value = window.scrollY;
-
-// })
-// information.addEventListener('click', () => {
-//     console.log('Click');
-//     myContactH3.classList.toggle('h3__whoami__container__hover');
-// })
-
-

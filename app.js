@@ -12,19 +12,22 @@ let myCursorOval = document.querySelector('.rightCursor')
 let goContact = document.querySelector('.btnspan2');
 let paragrapheHeader = document.querySelector('.visibleP');
 let bigbody = document.getElementById('body');
-const menu = document.querySelector('.headernav');
-const btnMenu = document.querySelector('.btn__toggle__container');
+const btn1 = document.querySelector('.btn1');
+let menu = document.querySelector('.headernav');
 const aMenu1 = document.querySelector('.header');
 let alex = document.querySelector('.alex');
 let redword = document.querySelector('#redword');
 let pblur = document.querySelector('.p__parallax1');
 let bgblur = document.getElementById('parallax1');
+let ligne1 = document.getElementById('ligne1');
+let ligne2 = document.getElementById('ligne2');
+let ligne3 = document.getElementById('ligne3');
 
 
 
 // Fonction qui gère l'apparition des différents éléments en fonction de la hauteur de scroll sur le body
 window.addEventListener("scroll", () => {
-    console.log(scrollY);
+    // console.log(scrollY);
     if (window.scrollY > 50) {
         myHome.classList.add('funnyPaddin')
         myContact.classList.add('funnyPaddin');
@@ -36,37 +39,25 @@ window.addEventListener("scroll", () => {
         myHome.classList.remove('funnyPaddin');
         myContact.classList.remove('funnyPaddin');
         myNews.classList.remove('funnyPaddin');
-    } if (window.scrollY > 500) {
     } if (window.scrollY > 799) {
         bigbody.classList.add('pink__body')
         myH2.classList.add('h2apears');
     } if (window.scrollY > 890) {
-        myheaderdiv.classList.add('headerfixed');
-        videoheader.classList.add('videoFixed');
-        myArrow.classList.add('arrow-visible');
-    } if (window.scrollY > 1499) {
-        // bigbody.classList.remove('pink__body');
-    } if (window.scrollY > 1899) {
-        myHome.classList.add('header-a-gold');
-        myContact.classList.add('header-a-gold');
-        myNews.classList.add('header-a-gold');
+        // myheaderdiv.classList.add('headerfixed');
         myheaderdiv.classList.add('headerfixeddark');
-        myheaderdiv.classList.remove('headerfixed');
         myHome.classList.add('headergoldy');
         myContact.classList.add('headergoldy');
         myNews.classList.add('headergoldy');
-
-    } if (window.scrollY < 1801) {
-        myheaderdiv.classList.remove('headerfixeddark');
-        // myheaderdiv.style.backgroundColor = 'transparent';
-        myheaderdiv.classList.add('headerfixed');
-        myHome.classList.remove('headergoldy');
-        myContact.classList.remove('headergoldy');
-        myNews.classList.remove('headergoldy');
-
+        myHome.classList.add('header-a-gold');
+        myContact.classList.add('header-a-gold');
+        myNews.classList.add('header-a-gold');
+        myArrow.classList.add('arrow-visible');
+        ligne1.classList.add('lignes__color__scroll');
+        ligne2.classList.add('lignes__color__scroll');
+        ligne3.classList.add('lignes__color__scroll');
+        // videoheader.classList.add('videoFixed');
     } if (window.scrollY > 2500) {
         bigbody.classList.remove('pink__body');
-
     } if (window.scrollY < 150) {
         myheaderdiv.classList.add('navbg');
     } if (window.scrollY === 0) {
@@ -76,13 +67,18 @@ window.addEventListener("scroll", () => {
         alex.style.opacity = '1';
     } if (window.scrollY < 799) {
         bigbody.classList.remove('pink__body');
-    } if (window.scrollY < 860) {
-        myheaderdiv.classList.remove('headerfixed');
-        videoheader.classList.remove('videoFixed');
+    } if (window.scrollY < 880) {
+        myheaderdiv.classList.remove('headerfixeddark');
+        myArrow.classList.remove('arrow-visible');
         myHome.classList.remove('header-a-gold');
         myContact.classList.remove('header-a-gold');
         myNews.classList.remove('header-a-gold');
-        myArrow.classList.remove('arrow-visible');
+        myHome.classList.remove('headergoldy');
+        myContact.classList.remove('headergoldy');
+        myNews.classList.remove('headergoldy');
+        ligne1.classList.remove('lignes__color__scroll');
+        ligne2.classList.remove('lignes__color__scroll');
+        ligne3.classList.remove('lignes__color__scroll');
     }
 });
 // Fonction qui adouci le retour en haut de page
@@ -106,38 +102,33 @@ myCursorOval.addEventListener('click', () => {
         paragrapheHeader.innerText = "Click me";
     }
 });
-
 goContact.addEventListener('click', () => {
-    document.getElementById('footerp').scrollIntoView({ block: "start", behavior: "smooth", top: 0, left: 0 });
+    document.getElementById('pres').scrollIntoView({ block: "start", behavior: "smooth", top: 0, left: 0 });
 });
 
-btnMenu.addEventListener('click', () => {
+function burger() {
+    btn1.classList.toggle('active')
     menu.classList.toggle('active__menu');
     myHome.classList.toggle('active__a');
     myContact.classList.toggle('active__a');
     myNews.classList.toggle('active__a');
-    console.log('Hello');
-
-})
-const btn1 = document.querySelector('.btn1');
-
-function burger() {
-    btn1.classList.toggle('active')
+    // console.log('Hello');
 }
+btn1.addEventListener('click', burger);
 
 const parallax1 = document.getElementById('parallax1');
 const parallax2 = document.getElementById('parallax2');
 const parallax3 = document.getElementById('parallax3');
 const parallax4 = document.getElementById('parallax4');
-const videoHead = document.getElementById('videohead');
+// const videoHead = document.getElementById('videohead');
 
 window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
     let value = window.scrollY;
-    // console.log('Offset: ' + offset);
+    console.log('Offset: ' + offset);
     // console.log('Offset *0.7 ' + offset * 0.7);
     parallax1.style.backgroundPositionY = offset * 0.6 + "px";
-    parallax2.style.backgroundPositionY = -offset * 0.5 + "px";
+    parallax2.style.backgroundPositionX = -offset * 0.7 + "px";
     parallax4.style.backgroundPositionY = -offset * 1.5 + "px";
 })
 let h3blur = document.getElementById('h3blur');
@@ -196,4 +187,5 @@ insta.addEventListener('mouseover', function () {
 insta.addEventListener('mouseleave', function () {
     link4.classList.remove('linked');
 })
-// btn1.addEventListener('click', burger);
+
+
