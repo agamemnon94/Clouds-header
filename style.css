@@ -17,9 +17,10 @@
   --transBlue: rgba(0, 168, 243, 0.2);
   --transDarkGold: rgba(179, 163, 106, 0.2);
   --transDark: rgba(55, 55, 55, 0.6);
-  --transWhite: rgba(255, 255, 255, 0);
-  --transBlue: rgba(177, 226, 255, 0.8);
   --transDeepWhite: rgba(255, 255, 255, 0.5);
+  --transgoldy: rgba(219, 211, 182, 0.1);
+  --transLightBlue: rgba(177, 226, 255, 0.8);
+  --transWhite: rgba(255, 255, 255, 0);
 }
 
 *,
@@ -326,7 +327,7 @@ header {
   padding-right: 2rem;
   height: 90px;
   background: transparent;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   z-index: 99;
 }
 .navbg {
@@ -397,6 +398,7 @@ header {
   transition: 0.3s ease-in;
   z-index: 100;
   background: var(--darkydark);
+  border-bottom: 2px solid var(--transgoldy);
 }
 .header-a {
   font-size: 22px;
@@ -523,9 +525,12 @@ header {
   text-transform: uppercase;
   color: var(--goldy);
   opacity: 0;
+  /* transition: 0.5s; */
 }
 .h2apears {
   opacity: 1;
+  width: 100%;
+  padding: 8rem 0;
   animation: movingLight 3s ease-in-out 1 1.5s;
   background-image: linear-gradient(
     to right,
@@ -538,9 +543,9 @@ header {
   background-size: 200% 100%;
   -webkit-background-clip: text;
   color: transparent;
-  transition: 1.5s ease-out;
   transform-style: preserve-3d;
-  /* -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2)); */
+  -webkit-user-select: none;
+  transition: opacity 1.5s ease-in-out;
 }
 /* ************************** */
 /*        Second-Section      */
@@ -619,7 +624,8 @@ header {
 }
 
 #h3blur {
-  margin: -60rem 0 0 10rem;
+  align-self: flex-start;
+  margin: 8rem 0 0 10rem;
   font-size: 70px;
   font-weight: 300;
   color: var(--goldy);
@@ -843,7 +849,7 @@ footer a {
   height: 3px;
   border-radius: 3px;
   margin: 2px auto 0 auto;
-  background: var(--darkgold);
+  background: var(--goldy);
   transition: 0.2s ease-out;
 }
 .email:hover::after {
@@ -1279,15 +1285,23 @@ footer a {
   justify-content: center;
   align-items: center;
   padding: 16rem 0;
+  -webkit-user-select: none;
 }
 .h1__whoami {
+  width: 100%;
+  height: 100%;
   font-size: 7.5rem;
   text-transform: uppercase;
   background-image: linear-gradient(
     to right,
-    var(--deepdark) 20%,
-    var(--goldy)
+    var(--dark),
+    var(--dark),
+    var(--goldy),
+    var(--dark),
+    var(--dark)
   );
+  background-size: 200% 200%;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
@@ -1690,7 +1704,6 @@ footer a {
     align-items: center;
     padding-right: 0;
     height: 90px;
-    /* background: rgba(17, 17, 17, 0.95); */
     z-index: 3;
   }
   .headernav.active__menu {
@@ -1701,6 +1714,8 @@ footer a {
     align-items: center;
     padding: 6rem 0 0 0;
     height: 300px;
+    border-bottom: 2px solid var(--transgoldy);
+    transition: 0.2s ease-out;
   }
   .header-a {
     display: block;
@@ -1717,6 +1732,9 @@ footer a {
   .video__who__container:nth-child(1) {
     width: 85%;
     height: auto;
+  }
+  .p__parallax2 {
+    margin: auto;
   }
 }
 @media screen and (max-width: 1550px) {
@@ -1755,15 +1773,16 @@ footer a {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
   }
   #h3blur {
-    margin: 0;
+    margin: 4rem auto;
   }
   .p__parallax1 {
     width: auto;
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
+    padding: 0 2rem;
   }
 }
 @media screen and (max-width: 950px) {
@@ -1824,6 +1843,14 @@ footer a {
   .social__btn {
     min-width: 100px;
     margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .p__parallax3 {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 2rem;
   }
 }
 @media screen and (max-width: 650px) {

@@ -22,6 +22,7 @@ let bgblur = document.getElementById('parallax1');
 let ligne1 = document.getElementById('ligne1');
 let ligne2 = document.getElementById('ligne2');
 let ligne3 = document.getElementById('ligne3');
+let h2move = document.getElementById('h2move');
 
 
 
@@ -187,5 +188,9 @@ insta.addEventListener('mouseover', function () {
 insta.addEventListener('mouseleave', function () {
     link4.classList.remove('linked');
 })
-
+h2move.addEventListener('mousemove', (e) => {
+    h2move.style.backgroundPositionX = e.offsetX * 2.5 + 'px';
+    // h2move.style.backgroundPositionY = e.offsetY * 3 + 'px';
+    console.log(e.offsetX);
+})
 
