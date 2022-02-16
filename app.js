@@ -2,7 +2,6 @@ let myheaderdiv = document.getElementById('headernav');
 let myCardsOdd = document.querySelector('.cardodd');
 let myCardsEven = document.querySelector('.cardeven');
 let myH2 = document.querySelector('.h2_section1');
-let videoheader = document.querySelector('.videohead');
 let myHome = document.getElementById('home');
 let myContact = document.getElementById('contact');
 let myNews = document.getElementById('news');
@@ -23,7 +22,6 @@ let ligne1 = document.getElementById('ligne1');
 let ligne2 = document.getElementById('ligne2');
 let ligne3 = document.getElementById('ligne3');
 let h2move = document.getElementById('h2move');
-
 
 
 // Fonction qui gère l'apparition des différents éléments en fonction de la hauteur de scroll sur le body
@@ -56,7 +54,6 @@ window.addEventListener("scroll", () => {
         ligne1.classList.add('lignes__color__scroll');
         ligne2.classList.add('lignes__color__scroll');
         ligne3.classList.add('lignes__color__scroll');
-        // videoheader.classList.add('videoFixed');
     } if (window.scrollY > 2500) {
         bigbody.classList.remove('pink__body');
     } if (window.scrollY < 150) {
@@ -121,7 +118,6 @@ const parallax1 = document.getElementById('parallax1');
 const parallax2 = document.getElementById('parallax2');
 const parallax3 = document.getElementById('parallax3');
 const parallax4 = document.getElementById('parallax4');
-// const videoHead = document.getElementById('videohead');
 
 window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;

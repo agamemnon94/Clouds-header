@@ -18,7 +18,7 @@
   --transDarkGold: rgba(179, 163, 106, 0.2);
   --transDark: rgba(55, 55, 55, 0.6);
   --transDeepWhite: rgba(255, 255, 255, 0.5);
-  --transgoldy: rgba(219, 211, 182, 0.1);
+  --transgoldy: rgba(219, 211, 182, 0.05);
   --transLightBlue: rgba(177, 226, 255, 0.8);
   --transWhite: rgba(255, 255, 255, 0);
 }
@@ -446,16 +446,7 @@ header {
   object-fit: cover;
   filter: hue-rotate(2deg);
 }
-.videoFixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  object-position: center;
-  object-fit: cover;
-  z-index: 1;
-}
+
 .alex {
   position: absolute;
   top: 98%;
@@ -529,7 +520,6 @@ header {
 }
 .h2apears {
   opacity: 1;
-  width: 100%;
   padding: 8rem 0;
   animation: movingLight 3s ease-in-out 1 1.5s;
   background-image: linear-gradient(
@@ -1288,19 +1278,21 @@ footer a {
   -webkit-user-select: none;
 }
 .h1__whoami {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   font-size: 7.5rem;
   text-transform: uppercase;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     var(--dark),
     var(--dark),
-    var(--goldy),
+    var(--corail),
     var(--dark),
     var(--dark)
-  );
-  background-size: 200% 200%;
+  ); */
+  background-image: url(/assets/img/Rainbow_bg.jfif);
+  background-size: 200% 100%;
+  background-position: center;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
   -webkit-background-clip: text;
   color: transparent;
@@ -1652,6 +1644,17 @@ footer a {
   z-index: 3;
   cursor: pointer;
 }
+/* ************************** */
+/* ********** Blog ********** */
+/* ************************** */
+
+#bodyBlog {
+  background: white;
+  position: relative;
+  min-height: 100vh;
+  background: var(--dark);
+}
+
 /* ************************** */
 /*       *  Responsive *      */
 /* ************************** */

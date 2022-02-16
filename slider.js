@@ -22,6 +22,7 @@ let span15 = document.querySelector('.span15');
 let span16 = document.querySelector('.span16');
 let span17 = document.querySelector('.span17');
 let h1whoami = document.getElementById('h1__whoami');
+let h1whoamiCont = document.getElementById('h1__who__container');
 
 // ↓ Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
 liste.addEventListener('click', function (e) {
@@ -164,7 +165,7 @@ information.addEventListener('mouseleave', () => {
     information.style.transform = "scale(1)";
     // console.log('Bye bye');
 })
-h1whoami.addEventListener('mousemove', (e) => {
+h1whoamiCont.addEventListener('mousemove', (e) => {
     h1whoami.style.backgroundPositionX = e.offsetX * 2.5 + 'px';
     h2move.style.backgroundPositionY = e.offsetY * 3 + 'px';
     console.log(e.offsetX);
