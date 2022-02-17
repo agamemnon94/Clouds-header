@@ -71,9 +71,7 @@ videolist.addEventListener('mouseover', function (e) {
         // console.log(h3Video[1].id);
         // console.log(mesH3);
 
-
         // console.log(mesH3.id);
-
     }
 });
 

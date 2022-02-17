@@ -1650,8 +1650,17 @@ footer a {
   align-items: center;
 }
 .div__1__resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
+  margin-top: 90px;
+}
+.div__1__resume p {
+  color: var(--goldy);
+  font-size: 22px;
+  font-weight: 300;
 }
 .div__2__resume {
   width: 100%;
@@ -1830,6 +1839,7 @@ footer a {
   .footer__card__container {
     width: 300px;
     height: 300px;
+    margin: 8rem auto 8rem auto;
   }
   .card {
     width: 300px;
