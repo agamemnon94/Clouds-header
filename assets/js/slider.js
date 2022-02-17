@@ -1,5 +1,6 @@
 let sliders = document.querySelectorAll('.slider');
 let liste = document.getElementById('ul');
+let videolist = document.getElementById('htmlwork');
 let myContactH3 = document.querySelector('.h3__whoami__container');
 let myVideoFullScreen = document.querySelector('.video__who__container');
 let smoothScroll = document.querySelector('.scroll-to-top');
@@ -23,6 +24,8 @@ let span16 = document.querySelector('.span16');
 let span17 = document.querySelector('.span17');
 let h1whoami = document.getElementById('h1__whoami');
 let h1whoamiCont = document.getElementById('h1__who__container');
+let h3Video = document.querySelectorAll('.h3__whoami__container');
+let lesH3 = document.getElementsByClassName('h3__whoami__container');
 
 // ↓ Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
 liste.addEventListener('click', function (e) {
@@ -39,11 +42,46 @@ liste.addEventListener('click', function (e) {
     }
 });
 // Même fonction qui ci-dessus mais sans agire avec les enfants des "li", des <a> par exemple. dans ce projet il n'y en a pas.
-// liste.addEventListener('click', function (e) {
-//     if (e.target.tagName === 'LI') {
-//         console.log(e.target.id);  // Check if the element is a LI
-//     }
-// });
+videolist.addEventListener('mouseover', function (e) {
+    let target = e.target;
+    let mesH3 = target.children;
+    while (target && target.parentNode !== videolist) {
+        target = target.parentNode;
+    }
+    if (!target) { return; }
+
+    if (e.target.className === 'focus') {
+        console.log(e.target.id);
+        // console.log(e.target.parentNode);
+        // console.log(e.target.parentElement);
+
+        // console.log(lesH3);
+        // target.children = h3Video;
+        // console.log(h3Video.parentNode);
+        // e.target.childNode = h3Video;
+        // for (let i = 0; i < h3Video.length; i++) {
+        //     console.log(h3Video[i]);
+        // }
+        // for (var index in h3Video) {
+        //     console.log(index + h3Video[index].id);
+        // }
+        // for (let index in lesH3) {
+        //     console.log((index + lesH3[index]));
+        // }
+        // console.log(h3Video[1].id);
+        // console.log(mesH3);
+
+
+        // console.log(mesH3.id);
+
+    }
+});
+
+
+
+
+
+
 sliders.forEach(function (slider) {
     let sliderRange = slider.querySelector('.slider__range');
     let sliderBefore = slider.querySelector('.slider__before');
@@ -155,18 +193,17 @@ smoothScroll.addEventListener('click', () => {
 
 let information = document.getElementById('info');
 
-information.addEventListener('mouseover', () => {
-    // console.log('Hello');
-    myContactH3.classList.add('h3__whoami__container__hover');
-    information.style.transform = "scale(1.1)";
-})
-information.addEventListener('mouseleave', () => {
-    myContactH3.classList.remove('h3__whoami__container__hover');
-    information.style.transform = "scale(1)";
-    // console.log('Bye bye');
-})
+// information.addEventListener('mouseover', () => {
+//     // console.log('Hello');
+//     myContactH3.classList.add('h3__whoami__container__hover');
+//     information.style.transform = "scale(1.1)";
+// })
+// information.addEventListener('mouseleave', () => {
+//     myContactH3.classList.remove('h3__whoami__container__hover');
+//     information.style.transform = "scale(1)";
+//     // console.log('Bye bye');
+// })
+
 h1whoamiCont.addEventListener('mousemove', (e) => {
     h1whoami.style.backgroundPositionX = e.offsetX * 2.5 + 'px';
-    h2move.style.backgroundPositionY = e.offsetY * 3 + 'px';
-    console.log(e.offsetX);
 })

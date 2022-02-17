@@ -10,7 +10,7 @@ let smoothScroll = document.querySelector('.scroll-to-top');
 let myCursorOval = document.querySelector('.rightCursor')
 let goContact = document.querySelector('.btnspan2');
 let paragrapheHeader = document.querySelector('.visibleP');
-let bigbody = document.getElementById('body');
+let bigbody = document.getElementById('resume');
 const btn1 = document.querySelector('.btn1');
 let menu = document.querySelector('.headernav');
 const aMenu1 = document.querySelector('.header');
@@ -26,7 +26,7 @@ let h2move = document.getElementById('h2move');
 
 // Fonction qui gère l'apparition des différents éléments en fonction de la hauteur de scroll sur le body
 window.addEventListener("scroll", () => {
-    // console.log(scrollY);
+    console.log(scrollY);
     if (window.scrollY > 50) {
         myHome.classList.add('funnyPaddin')
         myContact.classList.add('funnyPaddin');
@@ -42,7 +42,6 @@ window.addEventListener("scroll", () => {
         bigbody.classList.add('pink__body')
         myH2.classList.add('h2apears');
     } if (window.scrollY > 890) {
-        // myheaderdiv.classList.add('headerfixed');
         myheaderdiv.classList.add('headerfixeddark');
         myHome.classList.add('headergoldy');
         myContact.classList.add('headergoldy');
@@ -138,8 +137,6 @@ redword.addEventListener('mouseover', function () {
     redword.classList.toggle('redword__hover');
     bgblur.style.filter = 'hue-rotate(358deg)';
     audio.play();
-
-
 })
 redword.addEventListener('mouseleave', function () {
     h3blur.classList.toggle('blur');

@@ -21,6 +21,7 @@
   --transgoldy: rgba(219, 211, 182, 0.05);
   --transLightBlue: rgba(177, 226, 255, 0.8);
   --transWhite: rgba(255, 255, 255, 0);
+  --deepgrey: rgb(16, 17, 18);
 }
 
 *,
@@ -95,9 +96,9 @@ header {
   text-align: center;
   width: 100%;
 }
-/* ************************** */
-/*   Bouton toggle Hamburger  */
-/* ************************** */
+/* *************************** */
+/* *   Bouton toggle burger  * */
+/* *************************** */
 .btn__toggle__container {
   cursor: pointer;
   display: none;
@@ -110,9 +111,8 @@ header {
   top: 15px;
   right: 15px;
   box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.6);
-  padding: 10px;
+  padding: 8px;
   border-radius: 10px;
-  /* background: var(--goldy); */
 }
 .box {
   height: 44px;
@@ -253,6 +253,7 @@ header {
   padding: 1rem 1.5rem;
   transition: 0.2s ease-out;
   cursor: pointer;
+  -webkit-user-select: none;
   z-index: 1;
 }
 .btnspan:hover {
@@ -385,13 +386,6 @@ header {
   animation: img__rotate 5s linear infinite;
   cursor: pointer;
 }
-.headerfixed {
-  height: 90px;
-  transition: 0.3s ease-in;
-  box-shadow: 0 0px 50px #333;
-  background: var(--darkydark);
-  z-index: 100;
-}
 
 .headerfixeddark {
   height: 90px;
@@ -516,7 +510,7 @@ header {
   text-transform: uppercase;
   color: var(--goldy);
   opacity: 0;
-  /* transition: 0.5s; */
+  transition: opacity 1.5s;
 }
 .h2apears {
   opacity: 1;
@@ -990,7 +984,6 @@ footer a {
 }
 .whoami__head {
   position: fixed;
-  /* width: 100%; */
   height: 90px;
   top: 0;
   left: 0;
@@ -1006,7 +999,7 @@ footer a {
   align-items: center;
   padding-right: 2rem;
   height: 90px;
-  background: var(--deepdark);
+  background: var(--darkydark);
   transition: 0.5s ease-in-out;
   z-index: 5;
 }
@@ -1048,9 +1041,7 @@ footer a {
 /* ************************** */
 .slider__container {
   width: 800px;
-  /* max-width: 90%; */
   margin-top: 4rem;
-  /* margin: auto; */
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
@@ -1063,7 +1054,6 @@ footer a {
 }
 .slider {
   position: relative;
-  /* height: 500px; */
   height: auto;
   padding-bottom: 84%;
   border-radius: 8px;
@@ -1256,6 +1246,9 @@ footer a {
   opacity: 1;
   z-index: 0;
 }
+/* ************************** */
+/* *         textes         * */
+/* ************************** */
 .section__Text__whoami {
   width: 100%;
   height: 100vh;
@@ -1265,8 +1258,6 @@ footer a {
     var(--lightdark),
     var(--deepbrown)
   );
-  border-top: 3px solid var(--goldy);
-  border-bottom: 3px solid var(--goldy);
 }
 .h1__who__container {
   width: 100%;
@@ -1282,14 +1273,6 @@ footer a {
   height: 100%; */
   font-size: 7.5rem;
   text-transform: uppercase;
-  /* background-image: linear-gradient(
-    to right,
-    var(--dark),
-    var(--dark),
-    var(--corail),
-    var(--dark),
-    var(--dark)
-  ); */
   background-image: url(/assets/img/Rainbow_bg.jfif);
   background-size: 200% 100%;
   background-position: center;
@@ -1525,11 +1508,12 @@ footer a {
   align-items: center;
   /* ↓ À la place de flex-wrap et flex direction ↓ */
   flex-flow: wrap row;
-  margin: 10rem 0 5rem 0;
-  padding: 0 3rem;
+  /* margin: 10rem 0 5rem 0; */
+  padding: 10rem 3rem 4rem 3rem;
   width: 100%;
   min-height: 100vh;
-  background: var(--dark);
+  background: var(--darkydark);
+  /* background: black; */
 }
 .video__who__container {
   position: relative;
@@ -1644,15 +1628,34 @@ footer a {
   z-index: 3;
   cursor: pointer;
 }
-/* ************************** */
-/* ********** Blog ********** */
-/* ************************** */
+/* **************************** */
+/* ********** Resume ********** */
+/* **************************** */
 
-#bodyBlog {
-  background: white;
+#resume {
   position: relative;
-  min-height: 100vh;
-  background: var(--dark);
+  min-height: 300vh;
+  background: linear-gradient(
+    to top right,
+    var(--corail),
+    var(--darkydark) 50%,
+    var(--blue)
+  );
+  background: var(--deepgrey);
+}
+.main__resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.div__1__resume {
+  width: 100%;
+  height: 100vh;
+}
+.div__2__resume {
+  width: 100%;
+  height: 100vh;
 }
 
 /* ************************** */
@@ -1684,9 +1687,10 @@ footer a {
   /* ************** */
   .btn__toggle__container {
     position: fixed;
-    top: 15px;
+    top: 12px;
     right: 15px;
     display: block;
+    padding: 10px;
     z-index: 3;
   }
   .btn__toggle__container:hover {
@@ -1715,7 +1719,7 @@ footer a {
     flex-direction: column-reverse;
     justify-content: space-evenly;
     align-items: center;
-    padding: 6rem 0 0 0;
+    padding: 4rem 0 0 0;
     height: 300px;
     border-bottom: 2px solid var(--transgoldy);
     transition: 0.2s ease-out;
