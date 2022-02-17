@@ -1648,6 +1648,22 @@ footer a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 90px;
+}
+.resumeHeaderPhoto {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.resumeHeaderImg {
+  width: 100%;
+  transform: scale(1.2);
+  transition: 2.5s ease-in-out;
+}
+.resumeHeaderImg:hover {
+  transform: scale(1);
+  transition: 2.5s ease-in-out;
 }
 .div__1__resume {
   display: flex;
