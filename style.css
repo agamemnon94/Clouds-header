@@ -1633,7 +1633,7 @@ footer a {
 
 #resume {
   position: relative;
-  min-height: 200vh;
+  height: 186vh;
   background: linear-gradient(
     to top right,
     var(--corail),
@@ -1647,6 +1647,7 @@ footer a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* height: auto; */
   margin-top: 90px;
 }
 
@@ -1696,9 +1697,28 @@ footer a {
   height: 750px;
   background: var(--darkydark);
   color: var(--lighttransgoldy);
-  margin-top: 18rem;
+  margin-top: 4rem;
+  /* margin-bottom: -4rem; */
   box-shadow: 1px 1px 15px 1px #000;
   border-radius: 4px;
+  opacity: 0;
+  transition: 3s ease-in-out;
+}
+.resume__section__opacity {
+  opacity: 1;
+  margin-top: 4rem;
+  animation: movingSection 3s ease-in-out 1;
+}
+@keyframes movingSection {
+  0% {
+    margin-top: 40rem;
+  }
+  50% {
+    margin-top: -12rem;
+  }
+  100% {
+    margin-top: 4rem;
+  }
 }
 .vertical__icon__container {
   position: relative;

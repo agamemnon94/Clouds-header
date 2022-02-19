@@ -1,6 +1,7 @@
 let smoothScroll = document.querySelector('.scroll-to-top');
 let myArrow = document.getElementById('scroll-to-top');
 let headerImg = document.getElementsByClassName('resumeHeaderImg');
+let resumeSection2 = document.getElementById('sectio2resume');
 
 
 smoothScroll.addEventListener('click', () => {
@@ -14,11 +15,12 @@ smoothScroll.addEventListener('click', () => {
 });
 window.addEventListener("scroll", () => {
   console.log(scrollY);
-  if (window.scrollY > 899) {
+  if (window.scrollY > 99) {
+    resumeSection2.classList.add('resume__section__opacity');
+  } if (window.scrollY > 899) {
     myArrow.classList.add('arrow-visible');
   } if (window.scrollY < 801) {
     myArrow.classList.remove('arrow-visible');
-
   }
 });
 
