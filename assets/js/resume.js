@@ -23,6 +23,13 @@ window.addEventListener("scroll", () => {
     myArrow.classList.remove('arrow-visible');
   }
 });
+let resumeImg = document.getElementById('resumeImg');
+window.addEventListener("scroll", function () {
+  let offset = window.pageYOffset;
+  console.log('Offset: ' + offset);
+  resumeImg.style.backgroundpositionY = offset * 0.6 + "px";
+
+})
 
 // idée -> border de la nav barre dont la couleur avance en fonction du % du site visité.
 // La video principale de la page 2 à gauche seule les autres à droites et se bloc au milieu pendant que les autres défilent

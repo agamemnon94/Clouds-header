@@ -36,6 +36,7 @@
 }
 html {
   font-size: 62.5%;
+  /* scroll-behavior: smooth; */
 }
 body {
   background: white;
@@ -193,7 +194,7 @@ header {
 .rightCursor {
   position: absolute;
   top: 2px;
-  left: 53%;
+  right: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,7 +216,6 @@ header {
   cursor: pointer;
   z-index: 3;
   transform-style: preserve-3d;
-  box-shadow: 0px 0px 15px 0px #000, inset 0px 0px 15px 0px #000;
 }
 .leftCursor {
   position: absolute;
@@ -235,7 +235,6 @@ header {
 .btnspan {
   font-family: roboto, sans-serif;
   font-weight: 700;
-  font-size: 16px;
   color: var(--deepDarkGold);
   border-radius: 12px;
   padding: 1rem 1.5rem;
@@ -852,7 +851,6 @@ footer a {
   width: 300px;
   height: 600px;
   padding: 2rem;
-  /* background: white; */
 }
 
 .social__btn {
@@ -880,22 +878,17 @@ footer a {
 }
 .social__btn:nth-child(1) {
   animation-delay: 0.2s;
-  /* background: red; */
 }
 .social__btn:nth-child(3) {
   animation-delay: 0.6s;
-  /* background: green; */
 }
 .social__btn:nth-child(5) {
   animation-delay: 1s;
-  /* background: orange; */
 }
 .social__btn:nth-child(7) {
   animation-delay: 1.4s;
-  /* background: lightblue; */
 }
 .link {
-  /* position: absolute; */
   font-size: 1.2rem;
   margin-top: -2rem;
   color: white;
@@ -962,16 +955,15 @@ footer a {
 /*                     Who am i                  */
 /* ********************************************* */
 .whoamibody {
-  background: var(--dark);
+  background: var(--deepgrey);
   min-height: 100vh;
 }
-.pattern {
+/* .pattern {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #383838;
   opacity: 0.2;
   background-image: radial-gradient(
     ellipse farthest-corner at 10px 10px,
@@ -980,7 +972,7 @@ footer a {
     #383838 50%
   );
   background-size: 6px 6px;
-}
+} */
 .whoami__head {
   position: fixed;
   height: 90px;
@@ -1251,12 +1243,7 @@ footer a {
 .section__Text__whoami {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    var(--deepbrown),
-    var(--lightdark),
-    var(--deepbrown)
-  );
+  background: var(--deepgrey);
 }
 .h1__who__container {
   width: 100%;
@@ -1286,15 +1273,15 @@ footer a {
 /* ************************** */
 @keyframes falls {
   0% {
-    transform: translate(0px);
-    transform: rotateZ(0deg);
+    /* transform: translate(0px);
+    transform: rotateZ(0deg); */
   }
   8% {
     color: var(--corail);
-    transform: rotateZ(90deg);
+    transform: rotateZ(110deg);
   }
   15% {
-    transform: translateY(400px);
+    transform: translateY(300px);
     color: var(--blue);
   }
   20% {
@@ -1302,7 +1289,7 @@ footer a {
     color: var(--corail);
     transform-origin: center;
   }
-  33% {
+  38% {
     transform: translateY(-150px);
   }
   45% {
@@ -1312,6 +1299,7 @@ footer a {
     color: var(--corail);
   }
   55% {
+    transform: translateY(40px);
     color: var(--blue);
     transform: rotateZ(-90deg);
   }
@@ -1319,11 +1307,11 @@ footer a {
     color: var(--corail);
   }
   67% {
+    transform: translateY(-40px);
     color: var(--blue);
   }
   69% {
     color: var(--corail);
-    transform: translateY(40px);
   }
   73% {
     transform: rotateZ(30deg);
@@ -1343,10 +1331,11 @@ footer a {
     color: var(--blue);
   }
   100% {
-    transform: rotateZ(0deg);
-    transform: translateY(0);
+    /* transform: rotateZ(0deg); */
+    /* transform: translateY(0); */
   }
 }
+
 @keyframes fallsLater {
   0% {
     transform: rotateZ(0deg);
@@ -1375,7 +1364,7 @@ footer a {
   }
   100% {
     transform: rotateZ(-145deg);
-    transform: translateY(400px);
+    transform: translateY(600px);
     color: var(--corail);
   }
 }
@@ -1395,18 +1384,20 @@ footer a {
   padding: 0 0.5rem;
   color: var(--goldy);
   text-transform: uppercase;
-  transition: 0.3s;
+  /* transition: 0.3s; */
+  transition: 4s;
   background: var(--dark);
   box-shadow: inset 1px 1px 15px 1px var(--deepdark);
   transform-origin: bottom left;
+  /* transform-origin: center; */
   opacity: 1;
 }
 .active__falls {
-  animation: falls 5.2s ease-in 1;
+  animation: falls 5.2s linear 1;
 }
 .active__falls__later {
   transform-origin: bottom right;
-  animation: fallsLater 5.4s ease-in-out 1;
+  animation: fallsLater 5.4s ease-out 1;
 }
 .span17 {
   font-family: "Minecraft Evenings";
@@ -1418,85 +1409,111 @@ footer a {
 }
 .span16 {
   border-radius: 8px;
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
 }
 .span15 {
   font-style: italic;
   text-transform: lowercase;
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 .span14 {
-  animation-delay: 0.8s;
+  animation-delay: 1.1s;
 }
 .span13 {
   font-family: "Frijole";
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 .span12 {
   border-radius: 40% 23% 2% 8%;
-  animation-delay: 1.2s;
+  animation-delay: 1.8s;
 }
 .span11 {
   /* transform: rotate(-90deg); */
   padding: 3rem 0;
   margin-bottom: -4.5rem;
-  animation-delay: 1.4s;
+  animation-delay: 2.1s;
   line-height: 3px;
   width: 70px;
   height: 50px;
 }
 .span10 {
-  animation-delay: 1.6s;
+  animation-delay: 2.4s;
 }
 .span9 {
   border-radius: 71% 29% 98% 2% / 24% 83% 17% 76%;
-  animation-delay: 1.8s;
+  animation-delay: 2.7s;
 }
 .span8 {
   perspective: 12rem;
   transform: rotateX(-30deg);
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 .span7 {
-  animation-delay: 2.4s;
+  animation-delay: 3.3s;
 }
 .span6 {
   font-size: 90px;
   font-family: "Minecraft Evenings";
-  animation-delay: 2.6s;
+  animation-delay: 3.6s;
   border-radius: 20% 80% 16% 84% / 85% 8% 92% 15%;
   padding-left: 1.5rem;
 }
 .span5 {
-  animation-delay: 2.8s;
+  animation-delay: 3.9s;
 }
 .span4 {
   height: 100px;
-  animation-delay: 3s;
+  animation-delay: 4.2s;
 }
 .span3 {
   font-family: "Bangers";
   width: 70px;
   border-radius: 10% 20% 7% 40%;
-  animation-delay: 3.2s;
+  animation-delay: 4.5s;
 }
 .span2 {
   font-size: 55px;
   width: 80px;
   font-family: "Frijole";
   /* font-family: "Minecraft Evenings"; */
-  animation-delay: 3.4s;
+  animation-delay: 4.8s;
 }
 .span1 {
   margin-bottom: 10px;
-  animation-delay: 3.4s;
+  animation-delay: 5.1s;
 }
-.zoomed__span:hover {
-  transform: scale(1.2);
-  padding-bottom: 13px;
-  transition: 0.2s;
-  margin: 0 1rem;
+.zoomed__span:hover,
+.zoomed:hover ~ .zoomed__span {
+  transform: rotate(180deg) translateY(-200px);
+  transition: 2s;
+  filter: blur(20px);
+  opacity: 0;
 }
+.circle__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  transition: 2s;
+  margin: 10rem auto 0 auto;
+}
+.p__circle {
+  font-family: "Rubik", sans-serif;
+  text-transform: capitalize;
+  font-size: 40px;
+  color: var(--dark);
+  filter: blur(20px);
+  user-select: none;
+  transition: 1.5s;
+  margin: 2rem 0;
+}
+.circle__text > .p__circle:hover {
+  filter: blur(0);
+  transform: scale(1.4);
+  color: var(--goldy);
+}
+
 /************************/
 /******* htmlwork *******/
 /************************/
@@ -1511,7 +1528,7 @@ footer a {
   padding: 10rem 3rem 4rem 3rem;
   width: 100%;
   min-height: 100vh;
-  background: var(--darkydark);
+  background: var(--deepgrey);
   /* background: black; */
 }
 .video__who__container {
@@ -1633,15 +1650,13 @@ footer a {
 
 #resume {
   position: relative;
-  /* height: 186vh; */
   height: auto;
-
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top right,
     var(--corail),
     var(--darkydark) 50%,
     var(--blue)
-  );
+  ); */
   background: var(--deepgrey);
 }
 .main__resume {
@@ -1649,7 +1664,6 @@ footer a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: auto; */
   margin-top: 90px;
 }
 .resumeHeaderPhotoContainer {
@@ -1684,10 +1698,28 @@ footer a {
   font-size: 70px;
   font-weight: 400;
   text-transform: uppercase;
-  color: var(--goldy);
+  letter-spacing: 15px;
+  /* color: var(--goldy); */
+  /* color: transparent; */
+  color: rgba(219, 211, 182, 0.2);
   text-align: center;
-  -webkit-box-reflect: below -28px linear-gradient(transparent 30%, rgba(0, 0, 0, 0.1));
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  -webkit-box-reflect: below -28px linear-gradient(transparent 20%, rgba(0, 0, 0, 0.1));
+  animation: animatedText 2.5s linear infinite;
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: rgba(219, 211, 182, 0.2); */
 }
+@keyframes animatedText {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
 .resume__2__section {
   position: relative;
   display: flex;
@@ -1764,11 +1796,11 @@ footer a {
   flex-direction: column;
   margin: auto;
   color: var(--goldy);
-  /* background: var(--darkgold); */
-  /* z-index: 3; */
 }
 .about__me {
-  font-size: 60px;
+  font-size: 55px;
+  font-weight: 400;
+  text-transform: uppercase;
   color: var(--goldy);
 }
 .name {
@@ -2226,6 +2258,8 @@ footer a {
   }
   .slider__p2 {
     font-size: 2.6rem;
+    line-height: 0px;
+    margin-top: 4rem;
   }
   .red__word__container {
     width: 450px;
@@ -2235,11 +2269,17 @@ footer a {
     width: 440px;
     height: 400px;
   }
+
   .p__parallax3 {
     left: 25%;
   }
   #h3blur {
     font-size: 55px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .red__word__container {
+    top: 40%;
   }
 }
 @media screen and (max-width: 530px) {
@@ -2260,7 +2300,7 @@ footer a {
   }
   .parallax__p1__box {
     width: auto;
-    margin: 20rem auto 0 auto;
+    margin: 30rem auto 0 auto;
     text-align: center;
     padding: 0 2rem;
   }
