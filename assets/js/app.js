@@ -99,10 +99,13 @@ myCursorOval.addEventListener('click', () => {
         paragrapheHeader.innerText = "Click me";
     }
 });
+
+// Scroll to Contact
 goContact.addEventListener('click', () => {
     document.getElementById('pres').scrollIntoView({ block: "start", behavior: "smooth", top: 0, left: 0 });
 });
 
+// Burger Menu
 function burger() {
     btn1.classList.toggle('active')
     menu.classList.toggle('active__menu');
@@ -113,6 +116,9 @@ function burger() {
 }
 btn1.addEventListener('click', burger);
 
+// 
+// Parallax
+// 
 const parallax1 = document.getElementById('parallax1');
 const parallax2 = document.getElementById('parallax2');
 const parallax3 = document.getElementById('parallax3');
@@ -127,9 +133,11 @@ window.addEventListener("scroll", function () {
     parallax2.style.backgroundPositionX = -offset * 0.7 + "px";
     parallax4.style.backgroundPositionY = -offset * 1.5 + "px";
 })
+// 
+// Red heart appears
+// 
 let h3blur = document.getElementById('h3blur');
 let audio = new Audio("assets/sounds/heartbeat-01a.mp3");
-
 redword.addEventListener('mouseover', function () {
     h3blur.classList.toggle('blur');
     pblur.classList.toggle('blur');
@@ -138,6 +146,8 @@ redword.addEventListener('mouseover', function () {
     bgblur.style.filter = 'hue-rotate(358deg)';
     audio.play();
 })
+
+// Red heart disappears
 redword.addEventListener('mouseleave', function () {
     h3blur.classList.toggle('blur');
     pblur.classList.toggle('blur');
@@ -148,6 +158,7 @@ redword.addEventListener('mouseleave', function () {
     audio.currentTime = 0;
 })
 
+// Social btn
 let linkedin = document.getElementById('linkedin');
 let link1 = document.getElementById('link1');
 let email = document.getElementById('email');
@@ -183,7 +194,6 @@ insta.addEventListener('mouseleave', function () {
 })
 h2move.addEventListener('mousemove', (e) => {
     h2move.style.backgroundPositionX = e.offsetX * 2.5 + 'px';
-    // h2move.style.backgroundPositionY = e.offsetY * 3 + 'px';
     console.log(e.offsetX);
 })
 
