@@ -27,6 +27,10 @@ let h1whoamiCont = document.getElementById('h1__who__container');
 let h3Video = document.querySelectorAll('.h3__whoami__container');
 let lesH3 = document.getElementsByClassName('h3__whoami__container');
 
+window.addEventListener('load', () => {
+    document.body.classList.remove("clean__transition");
+})
+
 // ↓ Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
 liste.addEventListener('click', function (e) {
     let target = e.target; // Clicked element

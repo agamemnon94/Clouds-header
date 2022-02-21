@@ -23,6 +23,9 @@ let ligne2 = document.getElementById('ligne2');
 let ligne3 = document.getElementById('ligne3');
 let h2move = document.getElementById('h2move');
 
+window.addEventListener('load', () => {
+    document.body.classList.remove("clean__transition");
+})
 
 // Fonction qui gère l'apparition des différents éléments en fonction de la hauteur de scroll sur le body
 window.addEventListener("scroll", () => {

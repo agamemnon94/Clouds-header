@@ -3,6 +3,10 @@ let myArrow = document.getElementById('scroll-to-top');
 let headerImg = document.getElementsByClassName('resumeHeaderImg');
 let resumeSection2 = document.getElementById('sectio2resume');
 
+window.addEventListener('load', () => {
+  document.body.classList.remove("clean__transition");
+})
+
 
 smoothScroll.addEventListener('click', () => {
   window.scrollTo({
