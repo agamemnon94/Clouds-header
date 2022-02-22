@@ -860,6 +860,7 @@ footer a {
   width: 300px;
   height: 600px;
   padding: 2rem;
+  perspective: 1000px;
 }
 
 .social__btn {
@@ -881,6 +882,7 @@ footer a {
   border-radius: 4px;
   filter: drop-shadow(40px 28px 4px rgba(0, 0, 0, 0.3));
   z-index: 1;
+  transform-style: preserve-3d;
 }
 .social__btn:hover {
   animation-play-state: paused;
@@ -901,14 +903,15 @@ footer a {
   font-size: 1.2rem;
   margin-top: -2rem;
   color: white;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateY(-50px);
+  transition: all 0.3s ease-in;
 }
 
 .linked {
   opacity: 1;
   font-size: 1.2rem;
-  transition: all 0.5s ease-in-out;
+  transform: translateY(0px);
 }
 
 .LinkedIn {
@@ -1103,7 +1106,7 @@ footer a {
   width: 28px;
   height: 28px;
   border-radius: 5px;
-  border: 2px solid var(--goldy);
+  border: 1px solid var(--goldy);
   background: var(--dark);
   position: absolute;
   top: 50%;
@@ -1252,7 +1255,7 @@ footer a {
 /* ************************** */
 .section__Text__whoami {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background: var(--deepgrey);
 }
 .h1__who__container {
@@ -1497,30 +1500,56 @@ footer a {
   filter: blur(20px);
   opacity: 0;
 }
-.circle__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.section__blur {
   width: 100%;
-  transition: 2s;
-  margin: 10rem auto 0 auto;
+  height: 100vh;
+  align-items: center;
+  margin: 4rem auto 0 auto;
+  padding: 4rem 0 0 0;
+  /* background: white; */
+}
+.circle__text {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  margin-top: 2rem;
 }
 .p__circle {
+  position: absolute;
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
-  font-size: 40px;
+  font-size: 50px;
   color: var(--dark);
-  filter: blur(20px);
+  filter: blur(10px);
   user-select: none;
-  transition: 1.5s;
+  transform: scale(0.8);
+  transition: color 1.5s 0s, transform 1.5s 0.3s, filter 1.5s 0.8s;
   margin: 2rem 0;
+}
+.p__circle:nth-child(1) {
+  top: 200px;
+  left: 330px;
+  transform: translate(-230px, -180px);
+}
+.p__circle:nth-child(2) {
+  top: 250px;
+  left: 750px;
+}
+.p__circle:nth-child(3) {
+  bottom: 300px;
+  right: 250px;
+  transform: translate(150px, 150px);
 }
 .circle__text > .p__circle:hover {
   filter: blur(0);
-  transform: scale(1.4);
+  transform: scale(2);
   color: var(--goldy);
 }
+i {
+  color: #f1f1f1;
+  font-size: 50px;
+}
+
 /* ********************************** */
 /* *        section__3__who         * */
 /* ********************************** */
@@ -1529,7 +1558,6 @@ footer a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: var(--deepgrey); */
   /* background: white; */
   height: 100vh;
   margin-top: 10rem;
@@ -1544,9 +1572,10 @@ footer a {
   overflow: hidden;
 }
 .diaporama__container img {
-  display: block;
+  display: inline-block;
   width: 1920px;
-  height: auto;
+  height: 1080px;
+  transition: 0.5s;
 }
 
 /************************/
@@ -1686,6 +1715,8 @@ footer a {
 #resume {
   position: relative;
   height: auto;
+  /* display: flex; */
+  /* flex-direction: row; */
   /* background: linear-gradient(
     to top right,
     var(--corail),
@@ -1694,13 +1725,50 @@ footer a {
   ); */
   background: var(--deepgrey);
 }
-.main__resume {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 90px;
+.resume__head {
+  width: 100%;
+  height: auto;
+  top: 0px;
+  left: 0%;
+  transform-origin: top left;
+  z-index: 5;
 }
+.resumenav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+  height: 90px;
+  background: var(--darkydark);
+  transition: 0.5s ease-in-out;
+  z-index: 5;
+}
+.resume__a {
+  font-size: 22px;
+  padding: 0 1rem;
+  color: var(--goldy);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.resume__a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  border-radius: 3px;
+  margin: 2px auto 0 auto;
+  background: var(--goldy);
+  transition: 0.2s ease-out;
+}
+.resume__a:hover::after {
+  width: 100%;
+}
+
 .resumeHeaderPhotoContainer {
   display: flex;
   justify-content: center;
@@ -1713,12 +1781,21 @@ footer a {
   width: 100%;
   transform: scale(1.4) rotate(-7deg);
   transition: 2s ease-in-out;
-  filter: blur(3px);
+  margin-top: 4rem;
+  filter: blur(5px);
 }
 .resumeHeaderImg:hover {
   transform: scale(1.03) rotate(7deg);
   transition: 2s ease-in-out;
   filter: blur(0px);
+}
+.main__resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  /* transform: rotate(90deg); */
 }
 .h1__break__container {
   display: flex;
@@ -1726,7 +1803,7 @@ footer a {
   align-items: center;
   width: 100%;
   height: 300px;
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 70px;
 }
 .h1break {
@@ -2018,7 +2095,7 @@ footer a {
 .resume__card__wrapper {
   position: relative;
   min-height: 800px;
-  perspective: 2000px;
+  perspective: 1000px;
   perspective-origin: center;
 }
 .resume__card__wrapper:hover .resume__card {

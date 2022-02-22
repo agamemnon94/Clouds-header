@@ -21,9 +21,9 @@ window.addEventListener("scroll", () => {
   console.log(scrollY);
   if (window.scrollY > 99) {
     resumeSection2.classList.add('resume__section__opacity');
-  } if (window.scrollY > 899) {
+  } if (window.scrollY > 799) {
     myArrow.classList.add('arrow-visible');
-  } if (window.scrollY < 801) {
+  } if (window.scrollY < 700) {
     myArrow.classList.remove('arrow-visible');
   }
 });

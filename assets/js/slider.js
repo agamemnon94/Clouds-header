@@ -56,30 +56,24 @@ videolist.addEventListener('mouseover', function (e) {
 
     if (e.target.className === 'focus') {
         console.log(e.target.id);
-        // console.log(e.target.parentNode);
-        // console.log(e.target.parentElement);
 
-        // console.log(lesH3);
-        // target.children = h3Video;
-        // console.log(h3Video.parentNode);
-        // e.target.childNode = h3Video;
-        // for (let i = 0; i < h3Video.length; i++) {
-        //     console.log(h3Video[i]);
-        // }
-        // for (var index in h3Video) {
-        //     console.log(index + h3Video[index].id);
-        // }
-        // for (let index in lesH3) {
-        //     console.log((index + lesH3[index]));
-        // }
-        // console.log(h3Video[1].id);
-        // console.log(mesH3);
-
-        // console.log(mesH3.id);
     }
 });
 
+let i = 0;
+let images = ['/assets/img/Alvelole.jpg', '/assets/img/Abstract.jpg', '/assets/img/Coeur.jpg', '/assets/img/Tisser.jpg', '/assets/img/fluid.jpg']
+let time = 3000;
 
+function changeImg() {
+    document.slide.src = images[i];
+    if (i < images.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+    setTimeout("changeImg()", time);
+}
+window.onload = changeImg;
 
 
 
