@@ -24,8 +24,9 @@ let span16 = document.querySelector('.span16');
 let span17 = document.querySelector('.span17');
 let h1whoami = document.getElementById('h1__whoami');
 let h1whoamiCont = document.getElementById('h1__who__container');
-let h3Video = document.querySelectorAll('.h3__whoami__container');
-let lesH3 = document.getElementsByClassName('h3__whoami__container');
+let blurAnimation = document.querySelectorAll('.p__circle');
+
+
 
 window.addEventListener('load', () => {
     document.body.classList.remove("clean__transition");
@@ -41,21 +42,6 @@ liste.addEventListener('click', function (e) {
     if (target.tagName === 'LI') {
         // console.log(target.id); // Check if the element is a LI
         document.getElementById('h1__who__container').scrollIntoView({ block: "start", behavior: "smooth", top: 0, left: 0 });
-        // if (target.id === 'htmlwork') {
-        // } else { console.log('Ne fonctionne pas'); }
-    }
-});
-// Même fonction qui ci-dessus mais sans agire avec les enfants des "li", des <a> par exemple. dans ce projet il n'y en a pas.
-videolist.addEventListener('mouseover', function (e) {
-    let target = e.target;
-    let mesH3 = target.children;
-    while (target && target.parentNode !== videolist) {
-        target = target.parentNode;
-    }
-    if (!target) { return; }
-
-    if (e.target.className === 'focus') {
-        console.log(e.target.id);
 
     }
 });
@@ -74,9 +60,6 @@ function changeImg() {
     setTimeout("changeImg()", time);
 }
 window.onload = changeImg;
-
-
-
 
 sliders.forEach(function (slider) {
     let sliderRange = slider.querySelector('.slider__range');
@@ -128,13 +111,9 @@ sliders.forEach(function (slider) {
         }
     })
 });
-window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        // myContactH3.style.opacity = '1';
-    }
-})
+let blurtime = 17000;
 window.addEventListener("scroll", () => {
-    // console.log(scrollY);
+    console.log(scrollY);
     if (window.scrollY > 799) {
         span1.classList.add('active__falls__later')
         span2.classList.add('active__falls');
@@ -174,6 +153,11 @@ window.addEventListener("scroll", () => {
         span15.classList.remove('active__falls');
         span16.classList.remove('active__falls');
         span17.classList.remove('active__falls');
+    } if (window.scrollY > 2879) {
+        blurAnimation.forEach(p => {
+            p.classList.add('blurAnimation');
+        })
+
     }
 });
 
@@ -187,19 +171,26 @@ smoothScroll.addEventListener('click', () => {
     // window.scrollBy(0, window.innerHeight);
 });
 
-let information = document.getElementById('info');
-
-// information.addEventListener('mouseover', () => {
-//     // console.log('Hello');
-//     myContactH3.classList.add('h3__whoami__container__hover');
-//     information.style.transform = "scale(1.1)";
-// })
-// information.addEventListener('mouseleave', () => {
-//     myContactH3.classList.remove('h3__whoami__container__hover');
-//     information.style.transform = "scale(1)";
-//     // console.log('Bye bye');
-// })
-
 h1whoamiCont.addEventListener('mousemove', (e) => {
     h1whoami.style.backgroundPositionX = e.offsetX * 2.5 + 'px';
+})
+
+let lesInfos = document.querySelectorAll('.focus');
+let h3Video = document.querySelectorAll('.h3__whoami__container');
+let videoContainer = document.querySelectorAll('.video__who__container');
+
+
+lesInfos.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.style.color = "var(--corail)";
+        h3Video.forEach(info => {
+            info.classList.add('h3__whoami__container__hover')
+        })
+    })
+    item.addEventListener('mouseleave', () => {
+        item.style.color = "var(--dark)";
+        h3Video.forEach(info => {
+            info.classList.remove('h3__whoami__container__hover')
+        })
+    })
 })

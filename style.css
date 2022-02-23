@@ -969,6 +969,8 @@ footer a {
 .whoamibody {
   /* position: relative; */
   background: var(--deepgrey);
+  display: flex;
+  flex-direction: column;
 }
 .pattern {
   position: absolute;
@@ -1374,8 +1376,7 @@ footer a {
     color: var(--blue);
   }
   100% {
-    transform: rotateZ(-145deg);
-    transform: translateY(600px);
+    transform: translateY(490px) rotateZ(-90deg);
     color: var(--corail);
   }
 }
@@ -1400,7 +1401,6 @@ footer a {
   background: var(--dark);
   box-shadow: inset 1px 1px 15px 1px var(--deepdark);
   transform-origin: bottom left;
-  /* transform-origin: center; */
   opacity: 1;
 }
 .active__falls {
@@ -1408,7 +1408,7 @@ footer a {
 }
 .active__falls__later {
   transform-origin: bottom right;
-  animation: fallsLater 5.4s ease-out 1;
+  animation: fallsLater 5.4s ease-out 1 forwards;
 }
 .span17 {
   font-family: "Minecraft Evenings";
@@ -1500,67 +1500,18 @@ footer a {
   filter: blur(20px);
   opacity: 0;
 }
-.section__blur {
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  margin: 4rem auto 0 auto;
-  padding: 4rem 0 0 0;
-  /* background: white; */
-}
-.circle__text {
-  position: relative;
-  width: 100%;
-  height: 90%;
-  margin-top: 2rem;
-}
-.p__circle {
-  position: absolute;
-  font-family: "Rubik", sans-serif;
-  text-transform: capitalize;
-  font-size: 50px;
-  color: var(--dark);
-  filter: blur(10px);
-  user-select: none;
-  transform: scale(0.8);
-  transition: color 1.5s 0s, transform 1.5s 0.3s, filter 1.5s 0.8s;
-  margin: 2rem 0;
-}
-.p__circle:nth-child(1) {
-  top: 200px;
-  left: 330px;
-  transform: translate(-230px, -180px);
-}
-.p__circle:nth-child(2) {
-  top: 250px;
-  left: 750px;
-}
-.p__circle:nth-child(3) {
-  bottom: 300px;
-  right: 250px;
-  transform: translate(150px, 150px);
-}
-.circle__text > .p__circle:hover {
-  filter: blur(0);
-  transform: scale(2);
-  color: var(--goldy);
-}
-i {
-  color: #f1f1f1;
-  font-size: 50px;
-}
 
 /* ********************************** */
-/* *        section__3__who         * */
+/* *      section__diapo__who       * */
 /* ********************************** */
-.section__3__who {
+.section__diapo__who {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: white; */
+  width: 100%;
   height: 100vh;
-  margin-top: 10rem;
+  background: lightcoral;
 }
 .diaporama__container {
   position: relative;
@@ -1568,14 +1519,95 @@ i {
   margin-bottom: 4rem;
   width: 90%;
   height: 600px;
-  background-color: indianred;
   overflow: hidden;
+  margin-top: 4rem;
 }
 .diaporama__container img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   transition: 0.5s;
+}
+/* ********************************** */
+/* *        section__blur         * */
+/* ********************************** */
+.section__blur {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg__blur {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: pink; */
+  font-size: 30px;
+  line-height: 35px;
+  word-spacing: 15px;
+  padding: 2rem;
+  filter: blur(5px);
+  z-index: -1;
+  text-overflow: none;
+  color: var(--dark);
+}
+.blur__text__box {
+  position: relative;
+  width: 75%;
+  height: 65%;
+  /* background: pink; */
+}
+.p__circle {
+  position: absolute;
+  font-family: "Rubik", sans-serif;
+  text-transform: capitalize;
+  font-size: 50px;
+  filter: blur(10px);
+  transform: scale(1);
+  color: var(--dark);
+  user-select: none;
+  transition: color 1.5s 0s, transform 1.5s 0.3s, filter 1.5s 0.8s;
+}
+
+.p__circle:nth-child(1) {
+  top: 3%;
+  left: 7%;
+  /* animation-delay: 0.5s; */
+}
+.p__circle:nth-child(2) {
+  top: 45%;
+  left: 35%;
+  animation-delay: 0.5s;
+}
+.p__circle:nth-child(3) {
+  bottom: 3%;
+  right: 5%;
+  animation-delay: 1s;
+}
+.p__circle:hover {
+  filter: blur(0);
+  transform: scale(2);
+  color: var(--goldy);
+}
+.blurAnimation {
+  animation: blurAnimation 2s ease 1 forwards;
+}
+@keyframes blurAnimation {
+  from {
+  }
+  to {
+    filter: blur(0);
+    transform: scale(2);
+    color: var(--corail);
+  }
 }
 
 /************************/
