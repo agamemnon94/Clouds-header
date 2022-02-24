@@ -22,6 +22,7 @@ let ligne1 = document.getElementById('ligne1');
 let ligne2 = document.getElementById('ligne2');
 let ligne3 = document.getElementById('ligne3');
 let h2move = document.getElementById('h2move');
+let parallax4Hover = document.getElementById('p4hover')
 
 window.addEventListener('load', () => {
     document.body.classList.remove("clean__transition");
@@ -79,8 +80,15 @@ window.addEventListener("scroll", () => {
         ligne1.classList.remove('lignes__color__scroll');
         ligne2.classList.remove('lignes__color__scroll');
         ligne3.classList.remove('lignes__color__scroll');
+    } if (window.scrollY > 4199) {
+        parallax4Hover.classList.add('parallax__4__active__hover')
     }
 });
+
+
+
+
+
 // Fonction qui adouci le retour en haut de page
 smoothScroll.addEventListener('click', () => {
     window.scrollTo({
@@ -128,7 +136,7 @@ window.addEventListener("scroll", function () {
     // console.log('Offset *0.7 ' + offset * 0.7);
     parallax1.style.backgroundPositionY = offset * 0.6 + "px";
     parallax2.style.backgroundPositionX = -offset * 0.7 + "px";
-    parallax4.style.backgroundPositionY = -offset * 1.5 + "px";
+    parallax4.style.backgroundPositionY = -offset * 1.51 + "px";
 })
 let h3blur = document.getElementById('h3blur');
 let audio = new Audio("assets/sounds/heartbeat-01a.mp3");
