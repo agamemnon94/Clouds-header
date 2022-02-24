@@ -578,15 +578,16 @@ header {
   background: rgba(0, 0, 0, 0.85);
 }
 .p__parallax3 {
-  position: absolute;
-  top: 30%;
-  left: 10%;
+  position: relative;
+  /* top: 30%; */
+  /* left: 10%; */
   width: 300px;
   font-size: 28px;
   color: var(--goldy);
   font-weight: lighter;
   line-height: 50px;
   transition: all 0.8;
+  margin-left: 10rem;
 }
 .p__parallax3::before {
   content: "";
@@ -609,8 +610,8 @@ header {
 .p__parallax3:hover::before,
 .p__parallax3:hover::after {
   /* border-radius: 50%; */
-  transform: rotate(-45deg);
-  transition: all 0.8;
+  transform: rotate(45deg);
+  transition: all 2.8;
 }
 
 #h3blur {
@@ -714,6 +715,7 @@ header {
   background-position: center;
   background-attachment: fixed;
   filter: hue-rotate(30deg);
+  filter: blur(5px);
 }
 .parallax:nth-child(4) {
   background-image: url(/assets/img/small\ airplane\ window.jpg);
@@ -775,7 +777,6 @@ footer a {
   min-height: 400px;
   perspective: 2000px;
   perspective-origin: center;
-  /* background: white; */
 }
 .card__wrapper:hover .card {
   transform: rotateY(-180deg);
@@ -1950,6 +1951,7 @@ footer a {
   font-weight: 400;
   text-transform: uppercase;
   color: var(--goldy);
+  /* word-spacing: 40px; */
 }
 .name {
   font-family: "Rubik", sans-serif;
@@ -2326,6 +2328,35 @@ footer a {
     padding: 0 2rem;
   }
 }
+@media screen and (max-width: 1150px) {
+  .end {
+    flex-direction: column;
+    height: auto;
+  }
+  .footer__card__container {
+    width: 300px;
+    height: 300px;
+    margin: 8rem auto 8rem auto;
+  }
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+  .social__box {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+  }
+  .link {
+    display: none;
+  }
+  .social__btn {
+    min-width: 100px;
+    margin: 10px auto;
+  }
+}
+
 @media screen and (max-width: 950px) {
   html {
     font-size: 55%;
@@ -2355,35 +2386,6 @@ footer a {
   .h1__whoami {
     font-size: 5.5rem;
   }
-
-  .end {
-    flex-direction: column;
-    /* height: auto; */
-    height: auto;
-  }
-
-  .footer__card__container {
-    width: 300px;
-    height: 300px;
-    margin: 8rem auto 8rem auto;
-  }
-  .card {
-    width: 300px;
-    height: 300px;
-  }
-  .social__box {
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    height: auto;
-  }
-  .link {
-    display: none;
-  }
-  .social__btn {
-    min-width: 100px;
-    margin: 10px auto;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -2391,6 +2393,17 @@ footer a {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     padding: 2rem;
+  }
+  .p__parallax3::before {
+    top: -15px;
+    left: -15px;
+  }
+  .p__parallax3::after {
+    bottom: -15px;
+    right: -15px;
+  }
+  #parallax4 {
+    margin-left: auto;
   }
 }
 @media screen and (max-width: 650px) {
@@ -2421,7 +2434,9 @@ footer a {
   }
 
   .p__parallax3 {
-    left: 25%;
+    /* left: 25%; */
+    margin: 0 auto;
+    width: 250px;
   }
   #h3blur {
     font-size: 55px;
@@ -2456,8 +2471,54 @@ footer a {
   }
   .p__parallax1 {
     text-align: left;
-    font-size: 28px;
+    font-size: 22px;
     margin-left: 1rem;
     padding: 0 2rem;
+  }
+  .card {
+    width: 250px;
+    height: 250px;
+  }
+  #h3blur {
+    font-size: 45px;
+  }
+  #parallax1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .h1-header {
+    font-size: 65px;
+  }
+  .h2_section1 {
+    font-size: 65px;
+  }
+  .red__word__container {
+    width: 100%;
+    height: auto;
+  }
+  .redword {
+    width: 300px;
+    font-size: 55px;
+    padding: 8px 24px;
+  }
+  .redword__hover {
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+  }
+  .footer__card__container {
+    margin: 8rem auto 0;
+  }
+}
+@media screen and (max-width: 330px) {
+  #h3blur {
+    font-size: 35px;
+  }
+  .h1-header {
+    font-size: 4.5rem;
+  }
+  .h2_section1 {
+    font-size: 4rem;
   }
 }
