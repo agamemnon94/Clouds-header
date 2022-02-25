@@ -1023,7 +1023,7 @@ footer a {
   flex-direction: column;
 }
 .pattern {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1035,7 +1035,7 @@ footer a {
     #dbd3b6 50%,
     #383838 50%
   );
-  background-size: 6px 6px;
+  background-size: 6px 6px; */
   /* z-index: 1; */
 }
 .whoami__head {
@@ -1243,7 +1243,31 @@ footer a {
   /* margin-left: 8rem; */
   padding: 4rem 2rem 4rem 4rem;
   opacity: 0;
-  background: var(--deepbrown);
+  /* background: var(--deepbrown); */
+  background-image: radial-gradient(
+      circle at center center,
+      transparent,
+      rgb(24, 24, 24)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(24, 24, 24) 0px,
+      rgb(24, 24, 24) 2px,
+      transparent 2px,
+      transparent 10px,
+      rgb(24, 24, 24) 10px,
+      rgb(24, 24, 24) 11px,
+      transparent 11px,
+      transparent 21px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(33, 33, 33) 0px,
+      rgb(33, 33, 33) 4px,
+      transparent 4px,
+      transparent 8px
+    ),
+    linear-gradient(90deg, rgb(24, 24, 24), rgb(24, 24, 24));
   border-radius: 8px;
   transition: 0.8s ease-in-out;
   box-shadow: 0px 0px 7px 1px rgb(27, 27, 27);

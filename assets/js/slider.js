@@ -153,7 +153,7 @@ window.addEventListener("scroll", () => {
         span15.classList.remove('active__falls');
         span16.classList.remove('active__falls');
         span17.classList.remove('active__falls');
-    } if (window.scrollY > 2879) {
+    } if (window.scrollY > 2699) {
         blurAnimation.forEach(p => {
             p.classList.add('blurAnimation');
         })
