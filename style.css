@@ -748,31 +748,8 @@ header {
   align-items: center;
   width: 100%;
   height: 900px;
-  /* background: var(--darkydark); */
-  background-image: radial-gradient(
-      circle at center center,
-      transparent,
-      rgb(24, 24, 24)
-    ),
-    repeating-linear-gradient(
-      135deg,
-      rgb(24, 24, 24) 0px,
-      rgb(24, 24, 24) 2px,
-      transparent 2px,
-      transparent 10px,
-      rgb(24, 24, 24) 10px,
-      rgb(24, 24, 24) 11px,
-      transparent 11px,
-      transparent 21px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgb(33, 33, 33) 0px,
-      rgb(33, 33, 33) 4px,
-      transparent 4px,
-      transparent 8px
-    ),
-    linear-gradient(90deg, rgb(24, 24, 24), rgb(24, 24, 24));
+  background: var(--darkydark);
+
   color: var(--goldy);
   padding: 8rem 4rem 0;
 }
@@ -1243,31 +1220,8 @@ footer a {
   /* margin-left: 8rem; */
   padding: 4rem 2rem 4rem 4rem;
   opacity: 0;
-  /* background: var(--deepbrown); */
-  background-image: radial-gradient(
-      circle at center center,
-      transparent,
-      rgb(24, 24, 24)
-    ),
-    repeating-linear-gradient(
-      135deg,
-      rgb(24, 24, 24) 0px,
-      rgb(24, 24, 24) 2px,
-      transparent 2px,
-      transparent 10px,
-      rgb(24, 24, 24) 10px,
-      rgb(24, 24, 24) 11px,
-      transparent 11px,
-      transparent 21px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgb(33, 33, 33) 0px,
-      rgb(33, 33, 33) 4px,
-      transparent 4px,
-      transparent 8px
-    ),
-    linear-gradient(90deg, rgb(24, 24, 24), rgb(24, 24, 24));
+  background: var(--deepbrown);
+
   border-radius: 8px;
   transition: 0.8s ease-in-out;
   box-shadow: 0px 0px 7px 1px rgb(27, 27, 27);
@@ -1878,40 +1832,13 @@ footer a {
 #resume {
   position: relative;
   height: auto;
-  /* display: flex; */
-  /* flex-direction: row; */
   /* background: linear-gradient(
     to top right,
     var(--corail),
     var(--darkydark) 50%,
     var(--blue)
   ); */
-  /* background: var(--deepgrey); */
-
-  background-image: radial-gradient(
-      circle at center center,
-      transparent,
-      rgb(24, 24, 24)
-    ),
-    repeating-linear-gradient(
-      135deg,
-      rgb(24, 24, 24) 0px,
-      rgb(24, 24, 24) 2px,
-      transparent 2px,
-      transparent 10px,
-      rgb(24, 24, 24) 10px,
-      rgb(24, 24, 24) 11px,
-      transparent 11px,
-      transparent 21px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgb(33, 33, 33) 0px,
-      rgb(33, 33, 33) 4px,
-      transparent 4px,
-      transparent 8px
-    ),
-    linear-gradient(90deg, rgb(24, 24, 24), rgb(24, 24, 24));
+  background: var(--deepgrey);
 }
 .resume__head {
   width: 100%;
@@ -1998,8 +1925,6 @@ footer a {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 15px;
-  /* color: var(--goldy); */
-  /* color: transparent; */
   color: rgba(219, 211, 182, 0.2);
   text-align: center;
   background: linear-gradient(90deg, #000, #fff, #000);
@@ -2008,7 +1933,6 @@ footer a {
   -webkit-box-reflect: below -28px linear-gradient(transparent 20%, rgba(0, 0, 0, 0.1));
   animation: animatedText 2.5s linear infinite;
   -webkit-background-clip: text;
-  /* -webkit-text-fill-color: rgba(219, 211, 182, 0.2); */
 }
 @keyframes animatedText {
   0% {
@@ -2078,9 +2002,7 @@ footer a {
   height: 30px;
 }
 .resume__links .resume__icon:hover {
-  /* transform: scale(0.9); */
-  /* animation: vibrate 0.3s ease 1; */
-  transform: translateY(-5px);
+  animation: vibrate 0.3s ease 1;
 }
 .cube {
   position: absolute;
@@ -2160,11 +2082,9 @@ footer a {
   height: 100vh;
 }
 .age__container {
-  /* display: inline-block; */
   max-width: 500px;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: center;
   margin: 2rem 0;
 }
@@ -2182,7 +2102,6 @@ footer a {
   color: var(--lightdark);
 }
 .top__pan__text {
-  /* width: 600px; */
   font-size: 20px;
   font-weight: 300;
   font-family: "Hind Madurai", sans-serif;
@@ -2194,19 +2113,16 @@ footer a {
   margin: 0;
 }
 .boxes__container {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 .little__box__container1 {
-  /* width: 100%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .little__box__container2 {
-  /* width: 100%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2214,7 +2130,6 @@ footer a {
 .littel__boxes {
   width: 400px;
   height: 190px;
-  /* background: var(--corail); */
   margin: 20px 20px 20px 0;
   padding: 1rem;
 }
@@ -2285,7 +2200,6 @@ footer a {
   width: 360px;
   height: 800px;
   backface-visibility: hidden;
-  /* opacity: 0; */
 }
 .resume__card__wrapper {
   position: relative;
@@ -2340,7 +2254,6 @@ footer a {
   background-image: url(/assets/img/height.jpg);
   background-size: cover;
   background-position: center;
-  /* filter: hue-rotate(359deg); */
   transform: rotateY(-180deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
