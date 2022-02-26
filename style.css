@@ -1835,6 +1835,7 @@ footer a {
   opacity: 0;
   transition: 0.3s;
 }
+
 .discriber {
   font-size: 2.5rem;
   color: var(--dark);
