@@ -26,7 +26,6 @@ let h1whoami = document.getElementById('h1__whoami');
 let h1whoamiCont = document.getElementById('h1__who__container');
 let blurAnimation = document.querySelectorAll('.p__circle');
 
-
 window.addEventListener('load', () => {
     document.body.classList.remove("clean__transition");
 })
@@ -115,7 +114,6 @@ sliders.forEach(function (slider) {
         }
     })
 });
-let blurtime = 17000;
 window.addEventListener("scroll", () => {
     console.log(scrollY);
     if (window.scrollY > 799) {
@@ -161,7 +159,7 @@ window.addEventListener("scroll", () => {
         blurAnimation.forEach(p => {
             p.classList.add('blurAnimation');
         })
-
+        span1.classList.remove('active__falls__later');
     }
 });
 
@@ -180,26 +178,23 @@ h1whoamiCont.addEventListener('mousemove', (e) => {
 })
 
 let lesInfos = document.querySelectorAll('.focus');
+console.log(lesInfos.nextElementSibling);
 let h3Video = document.querySelectorAll('.h3__whoami__container');
 let videoContainer = document.querySelectorAll('.video__who__container');
 
-
+//Fonction permettantde d'ajouter et retirer une class à l'élément suivant
 lesInfos.forEach(item => {
     item.addEventListener('mouseover', () => {
         item.style.color = "var(--corail)";
-        // let cible = (item.nextElementSibling);
-        // cible.classList.add('h3__whoami__container__hover')
-        h3Video.forEach(info => {
-            info.classList.add('h3__whoami__container__hover')
-        })
+        let cible = item.nextElementSibling;
+        cible.classList.add('h3__whoami__container__hover')
+
     })
     item.addEventListener('mouseleave', () => {
-        // item.style.color = "var(--dark)";
-        // let cible = item.nextElementSibling;
-        // cible.classList.remove('h3__whoami__container__hover')
-        h3Video.forEach(info => {
-            info.classList.remove('h3__whoami__container__hover')
-        })
+        item.style.color = "var(--dark)";
+        let cible = item.nextElementSibling;
+        cible.classList.remove('h3__whoami__container__hover')
+
     })
 
 })
