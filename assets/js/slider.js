@@ -27,9 +27,13 @@ let h1whoamiCont = document.getElementById('h1__who__container');
 let blurAnimation = document.querySelectorAll('.p__circle');
 
 
-
 window.addEventListener('load', () => {
     document.body.classList.remove("clean__transition");
+})
+
+// À la fin de l'animation, scroll auto jusqu'à la section suivante
+span1.addEventListener('animationend', () => {
+    document.getElementById('divDiapo').scrollIntoView({ block: "start", behavior: "smooth", top: 0, left: 0 })
 })
 
 // ↓ Fonction qui permet de créer un événement au click sur chaque élément d'une liste en partant du parent soit, "l'ul" vers chaque "li" comme pour les enfants de la "li".
@@ -115,6 +119,7 @@ let blurtime = 17000;
 window.addEventListener("scroll", () => {
     console.log(scrollY);
     if (window.scrollY > 799) {
+        myArrow.classList.add('arrow-visible');
         span1.classList.add('active__falls__later')
         span2.classList.add('active__falls');
         span3.classList.add('active__falls');
@@ -133,7 +138,6 @@ window.addEventListener("scroll", () => {
         span16.classList.add('active__falls');
         span17.classList.add('active__falls');
     } if (window.scrollY > 999) {
-        myArrow.classList.add('arrow-visible');
     } if (window.scrollY < 801) {
         myArrow.classList.remove('arrow-visible');
         span1.classList.remove('active__falls__later');
@@ -183,15 +187,20 @@ let videoContainer = document.querySelectorAll('.video__who__container');
 lesInfos.forEach(item => {
     item.addEventListener('mouseover', () => {
         item.style.color = "var(--corail)";
+        // let cible = (item.nextElementSibling);
+        // cible.classList.add('h3__whoami__container__hover')
         h3Video.forEach(info => {
             info.classList.add('h3__whoami__container__hover')
         })
     })
     item.addEventListener('mouseleave', () => {
-        item.style.color = "var(--dark)";
+        // item.style.color = "var(--dark)";
+        // let cible = item.nextElementSibling;
+        // cible.classList.remove('h3__whoami__container__hover')
         h3Video.forEach(info => {
             info.classList.remove('h3__whoami__container__hover')
         })
     })
+
 })
 
