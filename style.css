@@ -555,17 +555,26 @@ header {
   color: var(--goldy);
 }
 .p__parallax2 {
-  width: 300px;
+  width: 350px;
   margin: 0 0 0 8rem;
   padding: 2rem;
   border-radius: 8px;
   font-size: 28px;
   color: white;
   background: rgba(0, 0, 0, 0.85);
+  transition: 0.2s ease-in-out;
 }
+.p__parallax2:hover {
+  background: #fff;
+  color: var(--darkydark);
+  box-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff,
+    0 0 200px #ffffff;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, #0005);
+}
+
 .p__parallax3 {
   position: relative;
-  width: 300px;
+  width: 350px;
   font-size: 28px;
   color: var(--goldy);
   font-weight: lighter;
@@ -2520,6 +2529,9 @@ footer a {
     margin-right: 20rem;
     margin-bottom: 0rem;
   }
+  .fleche {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -2734,6 +2746,8 @@ footer a {
   .discriber:nth-child(5) {
     font-size: 9px;
   }
-  .h3__whoami__container {
+  .p__parallax2 {
+    width: 300px;
+    margin: 0 auto;
   }
 }

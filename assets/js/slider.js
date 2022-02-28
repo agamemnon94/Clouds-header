@@ -135,7 +135,8 @@ window.addEventListener("scroll", () => {
         span15.classList.add('active__falls');
         span16.classList.add('active__falls');
         span17.classList.add('active__falls');
-    } if (window.scrollY > 999) {
+    } if (window.scrollY > 1890) {
+        span1.classList.remove('active__falls__later');
     } if (window.scrollY < 801) {
         myArrow.classList.remove('arrow-visible');
         span1.classList.remove('active__falls__later');
@@ -159,7 +160,7 @@ window.addEventListener("scroll", () => {
         blurAnimation.forEach(p => {
             p.classList.add('blurAnimation');
         })
-        span1.classList.remove('active__falls__later');
+
     }
 });
 
