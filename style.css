@@ -1846,6 +1846,7 @@ footer a {
   left: 0%;
   transform-origin: top left;
   z-index: 5;
+  overflow: hidden;
 }
 .resumenav {
   width: 100%;
@@ -1890,6 +1891,7 @@ footer a {
   width: 100%;
   height: 550px;
   overflow: hidden;
+  /* border: 1px solid white; */
 }
 .resumeHeaderImg {
   width: 100%;
@@ -1946,7 +1948,7 @@ footer a {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   width: 70%;
   height: 750px;
@@ -1985,13 +1987,6 @@ footer a {
   min-width: 70px;
   height: 750px;
 }
-.vertical__icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 300px;
-}
 .resume__icon {
   width: 30px;
   height: 30px;
@@ -1999,6 +1994,7 @@ footer a {
 .resume__links {
   width: 30px;
   height: 30px;
+  margin: 3rem auto;
 }
 .resume__links .resume__icon:hover {
   animation: vibrate 0.3s ease 1;
@@ -2292,12 +2288,11 @@ footer a {
     right: 15px;
     display: block;
     padding: 10px;
-    z-index: 3;
+    z-index: 7;
   }
   .btn__toggle__container:hover {
     animation: vibrate 0.2s;
     animation-delay: 0.15s;
-    z-index: 7;
   }
   .btn__toggle__container:active {
     transform: scale(0.9);
@@ -2314,9 +2309,24 @@ footer a {
     justify-content: center;
     align-items: center;
     padding-right: 0;
-    height: 90px;
     z-index: 3;
   }
+  .whonav {
+    display: none;
+  }
+
+  .whonav.active__menu {
+    background: var(--darkydark);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8rem 0 0 0;
+    height: 300px;
+    border-bottom: 2px solid var(--transgoldy);
+    transition: 0.2s ease-out;
+  }
+
   .headernav.active__menu {
     background: var(--darkydark);
     display: flex;
@@ -2340,6 +2350,16 @@ footer a {
     color: var(--goldy);
     margin: 0;
   }
+  .who-a {
+    display: block;
+    color: var(--goldy);
+    font-size: 38px;
+    margin-left: 0;
+    /* display: none; */
+  }
+
+  /**              Fin Burger            **/
+
   .video__who__container:nth-child(1) {
     width: 85%;
     height: auto;
@@ -2390,11 +2410,56 @@ footer a {
   }
   .parallax__p1__box {
     width: auto;
-    /* margin-right: auto;
-    margin-left: auto; */
     margin: 8rem auto 0 auto;
     text-align: center;
     padding: 0 2rem;
+  }
+  .resume__2__section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vertical__icon__container {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 70px;
+    min-height: 70px;
+  }
+  .resume__links {
+    margin: 0 2.3rem;
+  }
+  /* ************************************ */
+  /* *     responsive Resume cards      * */
+  /* ************************************ */
+  .resume__card__container {
+    width: 700px;
+    height: 300px;
+  }
+  .resume__card__wrapper {
+    height: 300px;
+    min-height: 300px;
+  }
+  .resume__card__wrapper:hover .resume__card {
+    transform: rotateY(-180deg);
+  }
+  .resume__card {
+    width: 700px;
+    height: 300px;
+  }
+  .resume__card__front {
+    justify-content: space-evenly;
+    background-size: cover;
+    background-position: bottom 87% right 50%;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  .name {
+    margin-bottom: 5px;
+  }
+  .resume__card__back {
+    background-size: 100%;
+    background-position: bottom 65% right 50%;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 1150px) {
@@ -2532,6 +2597,28 @@ footer a {
   .fleche {
     display: none;
   }
+  .resume__card__container {
+    width: 500px;
+    height: 200px;
+  }
+  .resume__card__wrapper {
+    height: 200px;
+    min-height: 200px;
+  }
+  .resume__card {
+    width: 500px;
+    height: 200px;
+  }
+  .resume__head {
+    height: 350px;
+  }
+  .resumeHeaderImg {
+    transform: scale(1.2) rotate(-7deg) translateY(-150px);
+    margin-top: 24rem;
+  }
+  .resumeHeaderImg:hover {
+    margin-top: 0rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -2577,13 +2664,24 @@ footer a {
   .p__circle:nth-child(1) {
     margin-left: 20rem;
   }
+  .resume__card__container {
+    width: 425px;
+    height: 200px;
+  }
+  .resume__card {
+    width: 425px;
+    height: 200px;
+  }
+  .littel__boxes {
+    width: 300px;
+    height: 190px;
+    /* margin: 20px 20px 20px 0; */
+    padding: 1rem;
+  }
 }
 @media screen and (max-width: 530px) {
   .whonav {
     justify-content: center;
-  }
-  .who-a {
-    margin-left: 4rem;
   }
   .logo__container {
     display: none;
@@ -2654,7 +2752,105 @@ footer a {
   .p__circle:nth-child(3) {
     margin: 0 auto;
   }
+  .resume__2__section {
+    width: 85%;
+  }
+  .resume__head {
+    height: 300px;
+  }
+  .resumeHeaderImg {
+    transform: scale(1.4) rotate(-7deg) translateY(-150px);
+    margin-top: 30rem;
+  }
+  .resumeHeaderImg:hover {
+    margin-top: 8rem;
+  }
 }
+@media screen and (max-width: 427px) {
+  .resume__2__section {
+    width: 90%;
+    height: auto;
+  }
+  .resume__card__container {
+    width: 300px;
+    height: 200px;
+  }
+  .resume__card {
+    width: 300px;
+    height: 200px;
+  }
+  .resume__card__wrapper {
+    height: 200px;
+    min-height: 200px;
+  }
+  .resume__card__front {
+    padding-bottom: 0;
+  }
+  .about__me__container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .name {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+  .dev {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .card__front__text {
+    font-size: 16px;
+  }
+  .right__pad__container {
+    align-items: center;
+  }
+  .about__me {
+    font-size: 30px;
+  }
+  .age {
+    font-size: 12px;
+  }
+  .top__pan__text {
+    font-size: 16px;
+    word-spacing: 2.5px;
+    letter-spacing: 0.5px;
+    width: 300px;
+  }
+  .middel__p {
+    font-size: 16px;
+  }
+  .discriber {
+    font-size: 1rem;
+  }
+  .h3__whoami {
+    font-size: 16px;
+  }
+  .zoomed__span {
+    font-size: 5.5rem;
+  }
+  .focus {
+    top: 3px;
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+  .resume__head {
+    height: 270px;
+  }
+  .resumeHeaderImg {
+    transform: scale(1.2) rotate(-7deg) translateY(-150px);
+    margin-top: 30rem;
+  }
+  .resumeHeaderImg:hover {
+    margin-top: 6rem;
+  }
+  .p__circle:nth-child(1) {
+    margin-left: 16rem;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .h1-header {
     font-size: 6.5rem;
@@ -2673,28 +2869,6 @@ footer a {
     width: 250px;
     height: 250px;
     margin: 0 auto;
-  }
-}
-@media screen and (max-width: 427px) {
-  .p__circle:nth-child(1) {
-    margin-left: 16rem;
-  }
-  .discriber {
-    font-size: 1rem;
-  }
-  .h3__whoami {
-    font-size: 16px;
-  }
-  .zoomed__span {
-    font-size: 5.5rem;
-  }
-
-  .focus {
-    top: 3px;
-    right: 3px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
   }
 }
 @media screen and (max-width: 377px) {
@@ -2718,6 +2892,16 @@ footer a {
   }
   .span2 {
     width: 60px;
+  }
+  .resume__head {
+    height: 270px;
+  }
+  .resumeHeaderImg {
+    transform: scale(1.2) rotate(-7deg) translateY(-150px);
+    margin-top: 32rem;
+  }
+  .resumeHeaderImg:hover {
+    margin-top: 8rem;
   }
 }
 @media screen and (max-width: 330px) {
@@ -2749,5 +2933,39 @@ footer a {
   .p__parallax2 {
     width: 300px;
     margin: 0 auto;
+  }
+  .littel__boxes {
+    width: 250px;
+  }
+  .about__me__container {
+    width: 100%;
+  }
+  .services {
+    font-size: 26px;
+  }
+  .projet {
+    font-size: 26px;
+    margin-top: 6rem;
+  }
+
+  .top__pan__text {
+    width: 250px;
+  }
+  .about__me {
+    text-align: center;
+  }
+  .resume__links {
+    margin: 0 1.3rem;
+  }
+
+  .resume__head {
+    height: 200px;
+  }
+  .resumeHeaderImg {
+    transform: scale(1.2) rotate(-7deg) translateY(-150px);
+    margin-top: 24rem;
+  }
+  .resumeHeaderImg:hover {
+    margin-top: -4rem;
   }
 }

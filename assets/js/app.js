@@ -26,6 +26,7 @@ let parallax4Hover = document.getElementById('p4hover')
 
 window.addEventListener('load', () => {
     document.body.classList.remove("clean__transition");
+    // audio.play();
 })
 
 // Fonction qui gère l'apparition des différents éléments en fonction de la hauteur de scroll sur le body
@@ -85,10 +86,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
-
-
-
 // Fonction qui adouci le retour en haut de page
 smoothScroll.addEventListener('click', () => {
     window.scrollTo({
@@ -131,9 +128,8 @@ const parallax4 = document.getElementById('parallax4');
 
 window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
-    let value = window.scrollY;
+    // let value = window.scrollY;
     console.log('Offset: ' + offset);
-    // console.log('Offset *0.7 ' + offset * 0.7);
     parallax1.style.backgroundPositionY = offset * 0.6 + "px";
     parallax2.style.backgroundPositionX = -offset * 0.7 + "px";
     parallax4.style.backgroundPositionY = -offset * 1.51 + "px";

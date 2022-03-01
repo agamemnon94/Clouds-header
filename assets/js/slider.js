@@ -199,4 +199,18 @@ lesInfos.forEach(item => {
     })
 
 })
+// Burger
+const btn1 = document.querySelector('.btn1');
+let menuWho = document.querySelector('.whonav');
+let myWhoHome = document.getElementById('whoHome');
+let myContact = document.getElementById('contact');
+let myWhoResume = document.getElementById('myWhoResume');
 
+function burger() {
+    btn1.classList.toggle('active')
+    menuWho.classList.toggle('active__menu');
+    myWhoHome.classList.toggle('active__a');
+    myContact.classList.toggle('active__a');
+    myWhoResume.classList.toggle('active__a');
+}
+btn1.addEventListener('click', burger);
