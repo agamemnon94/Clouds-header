@@ -18,7 +18,7 @@ smoothScroll.addEventListener('click', () => {
   // window.scrollBy(0, window.innerHeight);
 });
 window.addEventListener("scroll", () => {
-  console.log(scrollY);
+  // console.log(scrollY);
   if (window.scrollY > 99) {
     resumeSection2.classList.add('resume__section__opacity');
   } if (window.scrollY > 799) {
@@ -30,13 +30,32 @@ window.addEventListener("scroll", () => {
 let resumeImg = document.getElementById('resumeImg');
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
-  console.log('Offset: ' + offset);
+  // console.log(`Offset : ${offset}`);
   resumeImg.style.backgroundpositionY = offset * 0.6 + "px";
 
 })
 
+// Burger
+const btn1 = document.querySelector('.btn1');
+let menuResume = document.querySelector('.resumenav');
+let myResumeHome = document.getElementById('myResumeHome');
+let myResumeWork = document.getElementById('myResumeWork');
+
+function burger() {
+  btn1.classList.toggle('active')
+  menuResume.classList.toggle('active__menu');
+  myResumeHome.classList.toggle('active__a');
+  myResumeWork.classList.toggle('active__a');
+}
+btn1.addEventListener('click', burger);
+
+
+
 // idée -> border de la nav barre dont la couleur avance en fonction du % du site visité.
 // La video principale de la page 2 à gauche seule les autres à droites et se bloc au milieu pendant que les autres défilent
 
+// let cube = document.querySelector('.cube');
 
+// cube.addEventListener('click', () => {
 
+// })

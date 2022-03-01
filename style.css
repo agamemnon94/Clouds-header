@@ -1943,7 +1943,6 @@ footer a {
     background-position: 500%;
   }
 }
-
 .resume__2__section {
   position: relative;
   display: flex;
@@ -1959,7 +1958,7 @@ footer a {
   box-shadow: 1px 1px 15px 1px #000;
   border-radius: 4px;
   opacity: 0;
-  transition: 3s ease-in-out;
+  transition: margin-top 3s ease-in-out;
 }
 .resume__section__opacity {
   opacity: 1;
@@ -2008,6 +2007,7 @@ footer a {
   margin: 5px 0 0 0px;
   background: var(--corail);
   box-shadow: 1px 1px 15px 1px black;
+  cursor: pointer;
 }
 .about__me__container {
   display: flex;
@@ -2170,6 +2170,7 @@ footer a {
 .projet {
   position: relative;
   display: inline-block;
+  color: var(--goldy);
   font-size: 30px;
   margin: 2rem 0 1rem 0;
 }
@@ -2311,10 +2312,6 @@ footer a {
     padding-right: 0;
     z-index: 3;
   }
-  .whonav {
-    display: none;
-  }
-
   .whonav.active__menu {
     background: var(--darkydark);
     display: flex;
@@ -2338,6 +2335,18 @@ footer a {
     border-bottom: 2px solid var(--transgoldy);
     transition: 0.2s ease-out;
   }
+  .resumenav.active__menu {
+    background: var(--darkydark);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem 0 0 0;
+    height: 300px;
+    border-bottom: 2px solid var(--transgoldy);
+    transition: 0.2s ease-out;
+  }
+
   .header-a {
     display: block;
     color: var(--goldy);
@@ -2347,15 +2356,26 @@ footer a {
   }
   .header-a.active__a {
     display: block;
-    color: var(--goldy);
-    margin: 0;
   }
   .who-a {
     display: block;
     color: var(--goldy);
     font-size: 38px;
     margin-left: 0;
-    /* display: none; */
+    display: none;
+  }
+  .who-a.active__a {
+    display: block;
+  }
+  .resume__a {
+    display: block;
+    color: var(--goldy);
+    font-size: 38px;
+    margin-left: 0;
+    display: none;
+  }
+  .resume__a.active__a {
+    display: block;
   }
 
   /**              Fin Burger            **/
