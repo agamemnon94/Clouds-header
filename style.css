@@ -363,6 +363,7 @@ header {
 }
 .logo {
   width: 42px;
+  height: auto;
   border-radius: 71% 29% 37% 63% / 30% 38% 62% 70%;
   box-shadow: 0 0 7px 1px var(--goldy);
   transform-origin: center;
@@ -944,9 +945,11 @@ footer a {
 
 .LinkedIn {
   width: 50px;
+  height: auto;
 }
 .twitter {
   width: 100px;
+  height: auto;
 }
 /*******************/
 /** Bouton scroll **/
@@ -977,6 +980,7 @@ footer a {
 }
 .topArrowImg {
   width: 25px;
+  height: auto;
 }
 .arrow-visible {
   animation: movingBoton 3s ease-in-out infinite;
@@ -998,7 +1002,7 @@ footer a {
   padding: 1rem 0;
   font-size: 12px;
   font-weight: 300;
-  color: var(--lightdark);
+  color: var(--lighttransgoldy);
 }
 
 /* **************************************** */
@@ -1824,7 +1828,7 @@ footer a {
   padding: 1rem 0;
   font-size: 12px;
   font-weight: 300;
-  color: var(--lightdark);
+  color: var(--lighttransgoldy);
 }
 /* **************************** */
 /* ********** Resume ********** */
