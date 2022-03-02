@@ -18,12 +18,12 @@ smoothScroll.addEventListener('click', () => {
   // window.scrollBy(0, window.innerHeight);
 });
 window.addEventListener("scroll", () => {
-  // console.log(scrollY);
+  console.log(scrollY);
   if (window.scrollY > 99) {
     resumeSection2.classList.add('resume__section__opacity');
-  } if (window.scrollY > 799) {
+  } if (window.scrollY > 499) {
     myArrow.classList.add('arrow-visible');
-  } if (window.scrollY < 700) {
+  } if (window.scrollY < 400) {
     myArrow.classList.remove('arrow-visible');
   }
 });

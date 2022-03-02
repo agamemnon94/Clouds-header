@@ -936,13 +936,11 @@ footer a {
   transform: translateY(-50px);
   transition: all 0.2s ease-in;
 }
-
 .linked {
   opacity: 1;
   font-size: 1.2rem;
   transform: translateY(0px);
 }
-
 .LinkedIn {
   width: 50px;
   height: auto;
@@ -976,14 +974,14 @@ footer a {
 }
 .scroll-to-top:hover {
   animation-play-state: paused;
-  box-shadow: 0 0 7px 2px#333;
+  box-shadow: 0 0 7px 2px#333, 0 0 15px 4px #333;
 }
 .topArrowImg {
   width: 25px;
   height: auto;
 }
 .arrow-visible {
-  animation: movingBoton 3s ease-in-out infinite;
+  animation: movingBoton 2.5s ease-in-out infinite;
   background-image: linear-gradient(
     to right,
     var(--lightdark),
@@ -1232,11 +1230,9 @@ footer a {
   width: 430px;
   max-width: 430px;
   margin-top: 4rem;
-  /* margin-left: 8rem; */
   padding: 4rem 2rem 4rem 4rem;
   opacity: 0;
   background: var(--deepbrown);
-
   border-radius: 8px;
   transition: 0.8s ease-in-out;
   box-shadow: 0px 0px 7px 1px rgb(27, 27, 27);
@@ -1895,6 +1891,7 @@ footer a {
 }
 .resumeHeaderImg {
   width: 100%;
+  height: auto;
   transform: scale(1.4) rotate(-7deg) translateY(-150px);
   transition: 2s ease-in-out;
   margin-top: 4rem;
@@ -2023,6 +2020,7 @@ footer a {
   right: 0;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   font-size: 50px;
   font-weight: 400;
   text-transform: uppercase;
@@ -2282,6 +2280,9 @@ footer a {
     width: 100%;
     min-height: 100vh;
   }
+  .slider__container {
+    max-width: 80%;
+  }
   .slider__container__left {
     max-width: 55%;
     font-size: 12px;
@@ -2417,7 +2418,7 @@ footer a {
 }
 @media screen and (max-width: 1442px) {
   .about__me {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -2573,18 +2574,21 @@ footer a {
     height: auto;
     flex-direction: column;
   }
+  .who__slider__section {
+    flex-direction: column;
+  }
   .slider__container {
-    max-width: 80%;
-    margin: 16rem 0 8rem 0;
+    /* max-width: 80%; */
+    margin: 0rem 0 8rem 0;
   }
   .slider__container__left {
     max-width: 80%;
-    margin: 16rem 0 0 0;
+    margin: 12rem 0 0 0;
   }
   .display__content {
-    position: inherit;
-    margin: 6rem 0 12rem 7rem;
-    width: 350px;
+    position: static;
+    margin: 6rem 0 6rem;
+    width: 450px;
     padding: 4rem 2rem 4rem 4rem;
     background: var(--deepbrown);
     border-radius: 8px;
@@ -2595,7 +2599,6 @@ footer a {
     font-size: 5.5rem;
   }
 }
-
 @media screen and (max-width: 850px) {
   .p__parallax3 {
     background: rgba(0, 0, 0, 0.5);
@@ -2671,6 +2674,22 @@ footer a {
   .resumeHeaderImg:hover {
     margin-top: 0rem;
   }
+
+  .slider__container {
+    margin-top: 120px;
+  }
+  .display__content {
+    position: static;
+    margin: 6rem auto 6rem;
+    width: 400px;
+    text-align: center;
+    padding: 2rem 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  .about__me {
+    font-size: 34px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -2699,7 +2718,6 @@ footer a {
     width: 440px;
     height: 400px;
   }
-
   .p__parallax3 {
     margin: 0 auto;
     width: 250px;
@@ -2922,7 +2940,7 @@ footer a {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 375px) {
   .p__circle:nth-child(1) {
     margin-left: 13.5rem;
   }
@@ -2964,6 +2982,18 @@ footer a {
   }
   .p__parallax3 {
     margin-top: 14rem;
+  }
+  .display__content {
+    width: 310px;
+  }
+  .text__projet {
+    padding-right: 2rem;
+  }
+  .top__pan__text {
+    padding-right: 2rem;
+  }
+  .copy__who {
+    text-align: center;
   }
 }
 @media screen and (max-width: 330px) {
@@ -3040,5 +3070,8 @@ footer a {
   .resume__card {
     width: 300px;
     height: 150px;
+  }
+  .display__content {
+    width: 300px;
   }
 }
