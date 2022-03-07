@@ -28,6 +28,9 @@ let blurAnimation = document.querySelectorAll('.p__circle');
 
 window.addEventListener('load', () => {
     document.body.classList.remove("clean__transition");
+    // imgSlider1.style.opacity = "1";
+    changeImg = true;
+
 })
 
 // À la fin de l'animation, scroll auto jusqu'à la section suivante
@@ -49,20 +52,24 @@ liste.addEventListener('click', function (e) {
     }
 });
 
-let i = 0;
-let images = ['/assets/img/Alvelole.jpg', '/assets/img/Abstract.jpg', '/assets/img/Coeur.jpg', '/assets/img/Tisser.jpg', '/assets/img/fluid.jpg']
-let time = 3000;
+const items = document.querySelectorAll('.slide');
+const nbslide = items.length;
+let count = 0;
+let intervalID;
+let time = 5000
 
-function changeImg() {
-    document.slide.src = images[i];
-    if (i < images.length - 1) {
-        i++;
+function playSlide() {
+    items[count].classList.remove('active');
+    if (count < nbslide - 1) {
+        count++
     } else {
-        i = 0;
+        count = 0;
     }
-    setTimeout("changeImg()", time);
+    items[count].classList.add('active');
+    intervalID = setTimeout(playSlide, time);
 }
-window.onload = changeImg;
+playSlide();
+
 
 sliders.forEach(function (slider) {
     let sliderRange = slider.querySelector('.slider__range');
@@ -179,7 +186,6 @@ h1whoamiCont.addEventListener('mousemove', (e) => {
 })
 
 let lesInfos = document.querySelectorAll('.focus');
-console.log(lesInfos.nextElementSibling);
 let h3Video = document.querySelectorAll('.h3__whoami__container');
 let videoContainer = document.querySelectorAll('.video__who__container');
 
