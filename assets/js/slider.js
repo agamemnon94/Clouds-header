@@ -52,11 +52,12 @@ liste.addEventListener('click', function (e) {
     }
 });
 
+// SlideShox
 const items = document.querySelectorAll('.slide');
 const nbslide = items.length;
 let count = 0;
 let intervalID;
-let time = 5000
+let time = 3000
 
 function playSlide() {
     items[count].classList.remove('active');
@@ -80,12 +81,9 @@ sliders.forEach(function (slider) {
         sliderBefore.style = `width:${sliderRange.value}%`;
         sliderSeparator.style = `left:${sliderRange.value}%`;
     }
-
     sliderRange.addEventListener('input', updateSliderPosition);
-
     let isDragging = false;
     // console.log('false');
-
     sliderSeparator.addEventListener('mousedown', function () {
         isDragging = true;
         // console.log('appuyée');

@@ -1582,7 +1582,8 @@ footer a {
   width: 85%;
   height: 700px;
   overflow: hidden;
-  background: #333;
+  /* background: #333; */
+  box-shadow: 15px 20px 15px #0009;
 }
 .slide {
   position: absolute;
@@ -1592,10 +1593,9 @@ footer a {
   height: 100%;
 }
 .active {
-  animation: enlarge 4s ease-in-out 1;
+  animation: enlarge 3s ease-in-out 1;
   z-index: 2;
 }
-
 @keyframes enlarge {
   0% {
     left: 100%;
@@ -1737,7 +1737,7 @@ footer a {
   flex-shrink: 0;
   margin: 4rem;
   width: 700px;
-  height: 450px;
+  height: 390px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 0px 20px 0px rgb(3, 3, 3);
@@ -1746,6 +1746,12 @@ footer a {
   width: 55%;
   height: auto;
   margin-bottom: 8rem;
+}
+.video__whoami {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 2;
 }
 .focus {
   position: absolute;
@@ -1778,13 +1784,6 @@ footer a {
     transform: scale(0.9);
   }
 }
-.video__whoami {
-  width: 100%;
-  height: 100%;
-  /* object-position: center; */
-  object-fit: cover;
-  z-index: 2;
-}
 .h3__whoami__container {
   display: flex;
   flex-direction: column;
@@ -1793,8 +1792,8 @@ footer a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.8) 60%,
@@ -1804,8 +1803,7 @@ footer a {
   opacity: 0;
   transition: 0.3s;
 }
-
-.discriber {
+.describer {
   font-size: 2.5rem;
   color: var(--dark);
   margin: 2rem 0;
@@ -1813,14 +1811,26 @@ footer a {
   padding: 1rem 2rem;
   border-radius: 8px;
 }
+.samll__describer {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin: 1rem 0;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
 .h3__whoami {
   font-size: 40px;
   color: var(--dark);
   margin: 2rem 0 6rem 0;
 }
-.discriber:nth-child(5) {
+.describer:nth-child(5) {
   font-size: 1.5rem;
   margin-top: 8rem;
+  color: rgb(122, 122, 122);
+}
+.samll__describer:nth-child(5) {
+  font-size: 1.5rem;
   color: rgb(122, 122, 122);
 }
 .h3__whoami__container__hover {
