@@ -25,6 +25,7 @@ let span17 = document.querySelector('.span17');
 let h1whoami = document.getElementById('h1__whoami');
 let h1whoamiCont = document.getElementById('h1__who__container');
 let blurAnimation = document.querySelectorAll('.p__circle');
+let clearBlur = document.querySelector('.bg__blur');
 
 window.addEventListener('load', () => {
     document.body.classList.remove("clean__transition");
@@ -164,6 +165,7 @@ window.addEventListener("scroll", () => {
     } if (window.scrollY > 2699) {
         blurAnimation.forEach(p => {
             p.classList.add('blurAnimation');
+            clearBlur.classList.add('bg__blur__unclear');
         })
 
     }
