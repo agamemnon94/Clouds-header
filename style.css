@@ -480,7 +480,6 @@ header {
   height: 100vh;
   background: #e83151;
   transition: 1.2s ease-out;
-  /* border-bottom: 10px solid var(--dark); */
   z-index: 0;
   perspective: 2000px;
   transform-origin: center;
@@ -2422,7 +2421,6 @@ footer a {
   .resume__a.active__a {
     display: block;
   }
-
   /**              Fin Burger            **/
 
   .video__who__container:nth-child(1) {
