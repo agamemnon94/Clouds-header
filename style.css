@@ -503,7 +503,7 @@ header {
     to right,
     var(--deepdark),
     var(--dark),
-    #dbd3b6,
+    var(--goldy),
     var(--dark),
     var(--deepdark)
   );
