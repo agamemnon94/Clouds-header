@@ -85,7 +85,6 @@ window.addEventListener("scroll", () => {
         parallax4Hover.classList.add('parallax__4__active__hover')
     }
 });
-
 // Fonction qui adouci le retour en haut de page
 smoothScroll.addEventListener('click', () => {
     window.scrollTo({

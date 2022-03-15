@@ -84,14 +84,11 @@ sliders.forEach(function (slider) {
     }
     sliderRange.addEventListener('input', updateSliderPosition);
     let isDragging = false;
-    // console.log('false');
     sliderSeparator.addEventListener('mousedown', function () {
         isDragging = true;
-        // console.log('appuyée');
     })
     document.addEventListener('mouseup', function () {
         isDragging = false
-        // console.log('relâchée');
     })
     document.addEventListener('mousemove', function (e) {
         if (isDragging) {
@@ -103,7 +100,6 @@ sliders.forEach(function (slider) {
             let newWidth = (e.clientX - sliderRect.left) / sliderRect.width * 100;
             sliderRange.value = newWidth;
             updateSliderPosition();
-            // console.log(newWidth);
             if (newWidth < 55) {
                 sliderP1.classList.add('slider__p__opacity');
                 sliderP2.style.opacity = '0';
@@ -167,7 +163,6 @@ window.addEventListener("scroll", () => {
             p.classList.add('blurAnimation');
             clearBlur.classList.add('bg__blur__unclear');
         })
-
     }
 });
 
@@ -201,9 +196,7 @@ lesInfos.forEach(item => {
         item.style.color = "var(--dark)";
         let cible = item.nextElementSibling;
         cible.classList.remove('h3__whoami__container__hover')
-
     })
-
 })
 // Burger
 const btn1 = document.querySelector('.btn1');

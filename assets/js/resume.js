@@ -34,7 +34,6 @@ window.addEventListener("scroll", function () {
   resumeImg.style.backgroundpositionY = offset * 0.6 + "px";
 
 })
-
 // Burger
 const btn1 = document.querySelector('.btn1');
 let menuResume = document.querySelector('.resumenav');
@@ -49,13 +48,5 @@ function burger() {
 }
 btn1.addEventListener('click', burger);
 
-
-
 // idée -> border de la nav barre dont la couleur avance en fonction du % du site visité.
 // La video principale de la page 2 à gauche seule les autres à droites et se bloc au milieu pendant que les autres défilent
-
-// let cube = document.querySelector('.cube');
-
-// cube.addEventListener('click', () => {
-
-// })
