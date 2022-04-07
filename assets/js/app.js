@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
 
 // Fonction qui gère l'apparition des différents éléments en fonction de la hauteur de scroll sur le body
 window.addEventListener("scroll", () => {
-    console.log(scrollY);
+    // console.log(scrollY);
     if (window.scrollY > 50) {
         myHome.classList.add('funnyPaddin')
         myContact.classList.add('funnyPaddin');
@@ -162,7 +162,8 @@ let twitter = document.getElementById('twitter');
 let link3 = document.getElementById('link3');
 let insta = document.getElementById('insta');
 let link4 = document.getElementById('link4');
-
+// Il y a sans doute une meilleure façon d'écrire les fonction ↓
+// Pour les regrouper dans une seule
 linkedin.addEventListener('mouseover', function () {
     link1.classList.add('linked');
 })
