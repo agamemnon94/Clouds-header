@@ -973,7 +973,7 @@ footer a {
 }
 .scroll-to-top:hover {
   animation-play-state: paused;
-  box-shadow: 0 0 7px 2px#333, 0 0 15px 4px #333;
+  box-shadow: 0 0 7px 2px #333, 0 0 15px 4px #333;
 }
 .topArrowImg {
   width: 25px;
