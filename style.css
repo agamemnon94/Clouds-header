@@ -511,7 +511,7 @@ header {
   -webkit-background-clip: text;
   color: transparent;
   transform-style: preserve-3d;
-  -webkit-user-select: none;
+  user-select: none;
   transition: opacity 1.5s ease-in-out;
 }
 /* ************************** */
