@@ -110,13 +110,13 @@ goContact.addEventListener('click', () => {
     document.getElementById('pres').scrollIntoView({ block: "start", behavior: "smooth", top: 0, left: 0 });
 });
 
+// Fonction Burger
 function burger() {
     btn1.classList.toggle('active')
     menu.classList.toggle('active__menu');
     myHome.classList.toggle('active__a');
     myContact.classList.toggle('active__a');
     myNews.classList.toggle('active__a');
-    // console.log('Hello');
 }
 btn1.addEventListener('click', burger);
 

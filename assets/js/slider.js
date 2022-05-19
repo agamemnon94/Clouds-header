@@ -61,13 +61,13 @@ let intervalID;
 let time = 3000
 
 function playSlide() {
-    items[count].classList.remove('active');
+    items[count].classList.remove('active_slide_show');
     if (count < nbslide - 1) {
         count++
     } else {
         count = 0;
     }
-    items[count].classList.add('active');
+    items[count].classList.add('active_slide_show');
     intervalID = setTimeout(playSlide, time);
 }
 playSlide();
