@@ -262,7 +262,7 @@ header {
   background-image: linear-gradient(to right, #373737, #dbd3b6);
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-user-select: none;
+  user-select: none;
   -moz-user-select: none;
 }
 /* ************************** */
