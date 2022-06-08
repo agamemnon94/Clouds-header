@@ -72,7 +72,7 @@ function playSlide() {
 }
 playSlide();
 
-
+// Slider twin_photos
 sliders.forEach(function (slider) {
     let sliderRange = slider.querySelector('.slider__range');
     let sliderBefore = slider.querySelector('.slider__before');
