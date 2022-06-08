@@ -53,7 +53,7 @@ liste.addEventListener('click', function (e) {
     }
 });
 
-// SlideShox
+// SlideShow
 const items = document.querySelectorAll('.slide');
 const nbslide = items.length;
 let count = 0;
@@ -116,6 +116,7 @@ sliders.forEach(function (slider) {
         }
     })
 });
+
 window.addEventListener("scroll", () => {
     console.log(scrollY);
     if (window.scrollY > 799) {

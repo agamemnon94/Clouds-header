@@ -574,7 +574,7 @@ header {
   -webkit-box-reflect: below 5px linear-gradient(transparent, #0005);
 }
 
-.p__parallax3 {
+.p__parallax4 {
   position: relative;
   width: 350px;
   font-size: 28px;
@@ -585,7 +585,7 @@ header {
   margin-left: 10rem;
   margin-top: 10rem;
 }
-.p__parallax3::before {
+.p__parallax4::before {
   content: "";
   position: absolute;
   top: 8px;
@@ -594,7 +594,7 @@ header {
   height: 40px;
   background: var(--corail);
 }
-.p__parallax3::after {
+.p__parallax4::after {
   content: "";
   position: absolute;
   bottom: 6px;
@@ -603,8 +603,8 @@ header {
   height: 40px;
   background: var(--corail);
 }
-.p__parallax3:hover::before,
-.p__parallax3:hover::after {
+.p__parallax4:hover::before,
+.p__parallax4:hover::after {
   transform: rotate(45deg);
   transition: all 2.8;
 }
