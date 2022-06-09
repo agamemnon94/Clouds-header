@@ -191,7 +191,6 @@ lesInfos.forEach(item => {
         item.style.color = "var(--corail)";
         let cible = item.nextElementSibling;
         cible.classList.add('h3__whoami__container__hover')
-
     })
     item.addEventListener('mouseleave', () => {
         item.style.color = "var(--dark)";
