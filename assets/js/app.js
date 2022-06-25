@@ -6,7 +6,7 @@ let myHome = document.getElementById('home');
 let myContact = document.getElementById('contact');
 let myNews = document.getElementById('news');
 let myArrow = document.getElementById('scroll-to-top')
-let smoothScroll = document.querySelector('.scroll-to-top');
+// let smoothScroll = document.querySelector('.scroll-to-top');
 let myCursorOval = document.querySelector('.rightCursor')
 let goContact = document.querySelector('.btnspan2');
 let paragrapheHeader = document.querySelector('.visibleP');
@@ -86,7 +86,7 @@ window.addEventListener("scroll", () => {
     }
 });
 // Fonction qui adouci le retour en haut de page
-smoothScroll.addEventListener('click', () => {
+myArrow.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         left: 0,
