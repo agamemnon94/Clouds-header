@@ -1080,6 +1080,7 @@ footer a {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: 1s ease-in-out;
 }
 /* ************************** */
 /* *          Slider        * */
@@ -1233,7 +1234,6 @@ footer a {
   opacity: 0;
   background: var(--deepbrown);
   border-radius: 8px;
-  transition: 0.8s ease-in-out;
   box-shadow: 0px 0px 7px 1px rgb(27, 27, 27);
   transition: 1s ease-in-out;
   z-index: -1;
@@ -2612,6 +2612,12 @@ footer a {
     max-width: 80%;
     margin: 12rem 0 0 0;
   }
+  .comp {
+    position: absolute;
+    right: 25%;
+    bottom: 10px;
+  }
+
   .display__content {
     position: static;
     margin: 6rem 0 6rem;
