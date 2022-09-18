@@ -197,7 +197,7 @@ lesInfos.forEach(item => {
         let cible = item.nextElementSibling;
         cible.classList.remove('h3__whoami__container__hover')
     })
-})
+});
 // Burger
 const btn1 = document.querySelector('.btn1');
 let menuWho = document.querySelector('.whonav');
