@@ -56,19 +56,27 @@ liste.addEventListener('click', function (e) {
 // SlideShow
 const items = document.querySelectorAll('.slide');
 const nbslide = items.length;
+console.log(nbslide, 'nbr slide');
 let count = 0;
-let intervalID;
-let time = 3000
+let time = 1500
 
 function playSlide() {
-    items[count].classList.remove('active_slide_show');
+    items[count].classList.add('active_slide_show');
+    console.log(items[count], 'items count');
+    console.log(count, 'count');
+
     if (count < nbslide - 1) {
         count++
     } else {
         count = 0;
     }
-    items[count].classList.add('active_slide_show');
-    intervalID = setTimeout(playSlide, time);
+    items[count].classList.remove('active_slide_show');
+
+    items.forEach(element => console.log(element, 'tous les items'));
+    debugger;
+    console.log(items[count], 'items count');
+    console.log(count, 'count 2');
+    setTimeout(playSlide, time);
 }
 playSlide();
 
