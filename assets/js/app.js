@@ -128,7 +128,6 @@ const parallax4 = document.getElementById('parallax4');
 window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
     // let value = window.scrollY;
-    console.log('Offset: ' + offset);
     parallax1.style.backgroundPositionY = offset * 0.6 + "px";
     parallax2.style.backgroundPositionX = -offset * 0.7 + "px";
     parallax4.style.backgroundPositionY = -offset * 1.51 + "px";
